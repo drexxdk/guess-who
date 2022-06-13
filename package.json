@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod --base-href https://drexxdk.github.io/guess-who/",
+    "start": "ng serve -o",
+    "build": "ng build --base-href https://drexxdk.github.io/guess-who/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy": "npx angular-cli-ghpages --dir=dist/guess-who",
-    "http-server": "http-server -p 8080 -c-1 dist/guess-who"
+    "server": "http-server -p 8080 -c-1 dist/guess-who -o"
   },
   "private": true,
   "dependencies": {
