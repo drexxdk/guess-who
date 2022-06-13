@@ -4,9 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --base-href https://drexxdk.github.io/guess-who/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "npx angular-cli-ghpages --dir=dist/guess-who"
   },
   "private": true,
   "dependencies": {
