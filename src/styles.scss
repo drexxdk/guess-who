@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent; // disable android focus glow
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  overscroll-behavior: none;
+  word-break: break-word;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100%;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #323232;
+    color: white;
+  }
+  @media (prefers-color-scheme: light) {
+    background-color: white;
+    color: black;
+  }
+}
+
+body,
+button,
+text {
+  font-family: sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+}

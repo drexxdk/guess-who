@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  align-items: center;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+
+  @media (prefers-color-scheme: dark) {
+    border-bottom-color: #404040;
+  }
+  @media (prefers-color-scheme: light) {
+    border-bottom-color: #e5e5e5;
+  }
+}
+
+h1 {
+  padding: 0 10px;
+}
