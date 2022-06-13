@@ -1,0 +1,87 @@
+{
+  "configVersion": 1,
+  "timestamp": 1655148729712,
+  "index": "https://drexxdk.github.io/guess-who/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://drexxdk.github.io/guess-who/828.557d6b9846d557a9.js",
+        "https://drexxdk.github.io/guess-who/assets/blank.jpg",
+        "https://drexxdk.github.io/guess-who/favicon.ico",
+        "https://drexxdk.github.io/guess-who/index.html",
+        "https://drexxdk.github.io/guess-who/main.e1e68a9027208e82.js",
+        "https://drexxdk.github.io/guess-who/manifest.webmanifest",
+        "https://drexxdk.github.io/guess-who/polyfills.e42e552d7edef170.js",
+        "https://drexxdk.github.io/guess-who/runtime.50acb0f56dbb3a1b.js",
+        "https://drexxdk.github.io/guess-who/styles.40f9aef8dd4ef21b.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://drexxdk.github.io/guess-who/assets/icons/icon-128x128.png",
+        "https://drexxdk.github.io/guess-who/assets/icons/icon-144x144.png",
+        "https://drexxdk.github.io/guess-who/assets/icons/icon-152x152.png",
+        "https://drexxdk.github.io/guess-who/assets/icons/icon-192x192.png",
+        "https://drexxdk.github.io/guess-who/assets/icons/icon-384x384.png",
+        "https://drexxdk.github.io/guess-who/assets/icons/icon-512x512.png",
+        "https://drexxdk.github.io/guess-who/assets/icons/icon-72x72.png",
+        "https://drexxdk.github.io/guess-who/assets/icons/icon-96x96.png",
+        "https://drexxdk.github.io/guess-who/assets/people/1.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://drexxdk.github.io/guess-who/828.557d6b9846d557a9.js": "ea4a6acc67f4f24cf7e257cb5b83bd5faaf77aaa",
+    "https://drexxdk.github.io/guess-who/assets/blank.jpg": "502190a3c768f9234aa21bdff1057ba25a32afe1",
+    "https://drexxdk.github.io/guess-who/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://drexxdk.github.io/guess-who/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://drexxdk.github.io/guess-who/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://drexxdk.github.io/guess-who/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://drexxdk.github.io/guess-who/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://drexxdk.github.io/guess-who/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://drexxdk.github.io/guess-who/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://drexxdk.github.io/guess-who/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://drexxdk.github.io/guess-who/assets/people/1.jpg": "0932525e492ac655666d5afd806861cc7baa49a9",
+    "https://drexxdk.github.io/guess-who/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "https://drexxdk.github.io/guess-who/index.html": "2d1001b66255a42cce96e9995d7b7fc37c5a2fbb",
+    "https://drexxdk.github.io/guess-who/main.e1e68a9027208e82.js": "9af1ef674b73b613e7a1025c37be07dccedc6e40",
+    "https://drexxdk.github.io/guess-who/manifest.webmanifest": "5e09d2078f9ce1672168cbbca97a3c188e40fee8",
+    "https://drexxdk.github.io/guess-who/polyfills.e42e552d7edef170.js": "10413118279354a371ee283a79add7e7b9ad2a57",
+    "https://drexxdk.github.io/guess-who/runtime.50acb0f56dbb3a1b.js": "45db6cd480db6fbfdc6aa5055f8cdfc78b5b7eea",
+    "https://drexxdk.github.io/guess-who/styles.40f9aef8dd4ef21b.css": "7211610759f6bb19eedd3defa17398faf02b6f2a"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
