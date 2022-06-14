@@ -4,18 +4,6 @@
 
   @media (orientation: portrait) {
     flex-direction: column;
-
-    #image > div {
-      max-height: 30vh;
-      flex-shrink: 0;
-      aspect-ratio: 1;
-    }
-  }
-
-  @media (orientation: landscape) {
-    #image > div {
-      max-width: 30vw;
-    }
   }
 }
 
@@ -45,10 +33,17 @@
     display: flex;
     @media (orientation: landscape) {
       margin: 20px 0 20px 20px;
+      max-width: 30vw;
     }
 
     @media (orientation: portrait) {
       margin: 0 auto;
+      flex-direction: column;
+      text-align: center;
+      max-height: 30vh;
+      flex-shrink: 0;
+      aspect-ratio: 1;
+      gap: 20px;
     }
 
     > div {
@@ -93,23 +88,7 @@
 
   > div {
     display: grid;
-    gap: 20px;
-
-    @media (orientation: landscape) {
-      padding: 20px;
-    }
-
-    @media (orientation: portrait) {
-      padding: 0 20px 20px 20px;
-    }
-
-    h2 {
-      font-size: 32px;
-
-      @media (orientation: portrait) {
-        text-align: center;
-      }
-    }
+    padding: 0 20px 20px 20px;
 
     ul {
       display: grid;
@@ -119,6 +98,36 @@
 
       li {
         display: flex;
+      }
+    }
+  }
+}
+
+h2 {
+  font-size: 32px;
+  text-align: center;
+
+  @media (orientation: portrait) {
+    #options & {
+      display: none;
+    }
+  }
+
+  @media (orientation: landscape) {
+    #image & {
+      display: none;
+    }
+
+    #options & {
+      position: sticky;
+      top: 0;
+      padding: 20px 0;
+
+      @media (prefers-color-scheme: dark) {
+        background-color: #323232;
+      }
+      @media (prefers-color-scheme: light) {
+        background-color: white;
       }
     }
   }
