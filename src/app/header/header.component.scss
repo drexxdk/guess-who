@@ -1,15 +1,11 @@
+@import "~src/scss/scss-variables.scss";
+
 :host {
   display: flex;
   align-items: center;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-
-  @media (prefers-color-scheme: dark) {
-    border-bottom-color: #404040;
-  }
-  @media (prefers-color-scheme: light) {
-    border-bottom-color: #e5e5e5;
-  }
+  border-bottom: $header-border-width solid $header-border-color;
+  background-color: $header-background;
+  color: $header-text;
 }
 
 h1 {

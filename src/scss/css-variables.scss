@@ -1,0 +1,37 @@
+@use "scss-variables.scss";
+
+:root {
+  --thumb-color: #909090;
+  --track-color: white;
+
+  --body-background: white;
+  --body-text: black;
+
+  --header-background: #eee;
+  --header-text: black;
+  --header-border-color: #ddd;
+
+  --button-background: #eee;
+  --button-background-hover: green;
+  --button-text: black;
+  --button-text-hover: white;
+  --button-border-color: #ddd;
+  --button-border-color-hover: lightgreen;
+
+  @media (prefers-color-scheme: dark) {
+    --thumb-color: #202020;
+    --track-color: black;
+
+    --body-background: black;
+    --body-text: white;
+
+    --header-background: #202020;
+    --header-text: white;
+    --header-border-color: #303030;
+
+    --button-background: #202020;
+    --button-text: white;
+    --button-border-color: #303030;
+    --button-border-color-hover: darkgreen;
+  }
+}

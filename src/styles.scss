@@ -1,7 +1,13 @@
+@import "scss/scss-variables";
+@import "scss/css-variables";
+
 * {
   margin: 0;
   padding: 0;
   -webkit-tap-highlight-color: transparent; // disable android focus glow
+
+  scrollbar-width: thin;
+  scrollbar-color: $thumb-color $track-color;
 }
 
 *,
@@ -19,18 +25,25 @@ body {
 html {
   height: 100%;
   box-sizing: border-box;
+
+  ::-webkit-scrollbar-track {
+    background: $track-color;
+  }
+
+  ::-webkit-scrollbar {
+    width: 11px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $thumb-color;
+    border-radius: 6px;
+    border: 3px solid $track-color;
+  }
 }
 body {
   min-height: 100%;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: #323232;
-    color: white;
-  }
-  @media (prefers-color-scheme: light) {
-    background-color: white;
-    color: black;
-  }
+  background-color: $body-background;
+  color: $body-text;
 }
 
 body,
