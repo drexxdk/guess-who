@@ -2,13 +2,15 @@
 
 :host {
   display: flex;
+  gap: 2rem;
   align-items: center;
   border-bottom: $header-border-width solid $header-border-color;
   background-color: $header-background;
   color: $header-text;
+  padding: 0 1rem;
 }
 
 h1 {
-  padding: 0 1rem;
   font-size: 1.6rem;
+  flex-grow: 1;
 }

@@ -4,7 +4,15 @@ import {
   VersionEvent,
   VersionReadyEvent,
 } from '@angular/service-worker';
-import { BehaviorSubject, filter, map, Observable, Subject, take } from 'rxjs';
+import {
+  BehaviorSubject,
+  filter,
+  interval,
+  map,
+  Observable,
+  Subject,
+  take,
+} from 'rxjs';
 import { Platform } from '@angular/cdk/platform';
 
 export interface BeforeInstallPromptEvent extends Event {
@@ -47,27 +55,21 @@ export class PwaService {
     window.addEventListener('offline', this.updateOnlineStatus.bind(this));
 
     if (this.swUpdate.isEnabled) {
-      this.swUpdate.versionUpdates.pipe(
-        filter(
-          (evt: VersionEvent): evt is VersionReadyEvent =>
-            evt.type === 'VERSION_READY'
-        ),
-        map((evt: VersionReadyEvent) => {
-          this.modalVersion.next(true);
-        })
-      );
+      this.swUpdate.checkForUpdate();
+      this.swUpdate.versionUpdates.subscribe((event) => {
+        this.modalVersion.next(true);
+      });
     }
 
     this.loadModalPwa();
   }
-
   private updateOnlineStatus(): void {
     this.isOnline.next(window.navigator.onLine);
   }
 
   public updateVersion(): void {
     this.modalVersion.next(false);
-    window.location.reload();
+    this.swUpdate.activateUpdate().then(() => document.location.reload());
   }
 
   public closeVersion(): void {
