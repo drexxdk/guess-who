@@ -1,0 +1,28 @@
+<ng-container
+  *ngIf="{
+    modalPwaEvent: modalPwaEvent$ | async,
+    modalPwaPlatform: modalPwaPlatform$ | async
+  } as sub"
+>
+  <ng-container
+    *ngIf="sub.modalPwaPlatform === 'ANDROID' || sub.modalPwaPlatform === 'IOS'"
+  >
+    <button type="button" aria-label="Close" (click)="onClickClosePwa()">
+      X
+    </button>
+    <button
+      *ngIf="sub.modalPwaPlatform === 'ANDROID'"
+      (click)="onClickAddToHomeScreen()"
+    >
+      Add this WEB app to home screen
+    </button>
+    <label *ngIf="sub.modalPwaPlatform === 'IOS'"
+      >To install this WEB app on your device, tap the "Menu" button
+      <img
+        src="https://res.cloudinary.com/rodrigokamada/image/upload/v1641089482/Blog/angular-pwa/safari_action_button_38x50.png"
+        class="ios-menu m-0" />
+      and then "Add to home screen" button
+      <i class="bi bi-plus-square"></i
+    ></label>
+  </ng-container>
+</ng-container>

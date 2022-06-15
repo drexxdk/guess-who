@@ -1,0 +1,8 @@
+<ng-container
+  *ngIf="{
+    isOnline: isOnline$ | async
+  } as sub"
+>
+  <label *ngIf="sub.isOnline">Online</label>
+  <label *ngIf="!sub.isOnline">Offline</label>
+</ng-container>
