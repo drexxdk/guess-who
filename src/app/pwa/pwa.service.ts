@@ -55,7 +55,9 @@ export class PwaService {
     window.addEventListener('offline', this.updateOnlineStatus.bind(this));
 
     if (this.swUpdate.isEnabled) {
-      this.swUpdate.checkForUpdate();
+      interval(60 * 1000).subscribe(() => {
+        swUpdate.checkForUpdate();
+      });
 
       this.swUpdate.versionUpdates.pipe(
         filter(
