@@ -80,6 +80,7 @@ export class PwaService {
         'beforeinstallprompt',
         (e: BeforeInstallPromptEvent) => {
           e.preventDefault();
+          this.modalPwaEvent.next(e);
           this.modalPwaPlatform.next('ANDROID');
         }
       );
@@ -101,8 +102,8 @@ export class PwaService {
         if (e) {
           e.prompt();
         }
+        this.modalPwaPlatform.next(undefined);
       });
-      this.modalPwaPlatform.next(undefined);
     }
   }
 

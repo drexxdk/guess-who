@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { PwaModule } from './pwa/pwa.module';
 import { PwaService } from './pwa/pwa.service';
+import { InstallAppComponent } from './pwa/install-app/install-app.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, InstallAppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
