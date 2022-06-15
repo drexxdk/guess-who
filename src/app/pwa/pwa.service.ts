@@ -56,9 +56,15 @@ export class PwaService {
 
     if (this.swUpdate.isEnabled) {
       this.swUpdate.checkForUpdate();
-      this.swUpdate.versionUpdates.subscribe((event) => {
-        this.modalVersion.next(true);
-      });
+
+      this.swUpdate.versionUpdates.pipe(
+        filter(
+          (evt: any): evt is VersionReadyEvent => evt.type === 'VERSION_READY'
+        ),
+        map((evt: any) => {
+          this.modalVersion.next(true);
+        })
+      );
     }
 
     this.loadModalPwa();
