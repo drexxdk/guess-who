@@ -1,3 +1,7 @@
+@use "sass-rem" with (
+  $baseline: 10px
+);
+
 @import "scss/scss-variables";
 @import "scss/css-variables";
 
@@ -23,6 +27,7 @@ body {
 }
 
 html {
+  @include sass-rem.baseline;
   height: 100%;
   box-sizing: border-box;
 

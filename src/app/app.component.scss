@@ -1,3 +1,5 @@
+@import "~src/scss/scss-variables.scss";
+
 :host {
   min-height: 100vh;
   display: grid;
@@ -9,11 +11,11 @@
 
 app-header {
   grid-area: header;
-  height: 50px;
+  height: $header-height;
 }
 
 #content {
-  height: calc(100vh - 50px);
+  height: calc(100vh - $header-height);
   overflow: auto;
   grid-area: content;
 

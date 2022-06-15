@@ -1,13 +1,16 @@
+@use "sass-rem" as *;
+
 $thumb-color: var(--thumb-color);
 $track-color: var(--track-color);
 
 $body-background: var(--body-background);
 $body-text: var(--body-text);
 
+$header-height: 5rem;
 $header-background: var(--header-background);
 $header-text: var(--header-text);
 $header-border-color: var(--header-border-color);
-$header-border-width: 1px;
+$header-border-width: 0.1rem;
 
 $button-background: var(--button-background);
 $button-background-hover: var(--button-background-hover);
@@ -15,7 +18,7 @@ $button-text: var(--button-text);
 $button-text-hover: var(--button-text-hover);
 $button-border-color: var(--button-border-color);
 $button-border-color-hover: var(--button-border-color-hover);
-$button-border-width: 1px;
-$button-border-radius: 10px;
+$button-border-width: 0.1rem;
+$button-border-radius: 1rem;
 
-$image-border-radius: 20px;
+$image-border-radius: 2rem;

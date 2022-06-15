@@ -1,3 +1,4 @@
+@use "sass-rem" as *;
 @import "~src/scss/scss-variables.scss";
 
 :host {
@@ -17,7 +18,7 @@
   background-color: $body-background;
 
   @media (orientation: portrait) {
-    padding: 20px;
+    padding: 2rem;
   }
 
   @media (orientation: landscape) {
@@ -27,7 +28,7 @@
   > div {
     display: flex;
     @media (orientation: landscape) {
-      margin: 20px 0 20px 20px;
+      margin: 2rem 0 2rem 2rem;
       max-width: 30vw;
     }
 
@@ -38,7 +39,7 @@
       max-height: 30vh;
       flex-shrink: 0;
       aspect-ratio: 1;
-      gap: 20px;
+      gap: 2rem;
     }
 
     > div {
@@ -68,7 +69,6 @@
         aspect-ratio: 1;
         background-size: cover;
         background-position: center;
-        border-radius: 20px;
       }
     }
   }
@@ -84,12 +84,12 @@
 
   > div {
     display: grid;
-    padding: 0 20px 20px 20px;
+    padding: rem(0 20px 20px 20px);
 
     ul {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
-      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(min(35rem, 100%), 1fr));
+      gap: 1rem;
       list-style-type: none;
 
       li {
@@ -100,7 +100,7 @@
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 3.2rem;
   text-align: center;
 
   @media (orientation: portrait) {
@@ -117,17 +117,17 @@ h2 {
     #options & {
       position: sticky;
       top: 0;
-      padding: 20px 0;
+      padding: 2rem 0;
       background-color: $body-background;
     }
   }
 }
 
 button {
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   border: $button-border-width solid $button-border-color;
   border-radius: $button-border-radius;
-  font-size: 24px;
+  font-size: 2.4rem;
   width: 100%;
   text-align: left;
   background-color: $button-background;
