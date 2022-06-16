@@ -70,3 +70,14 @@ h5,
 h6 {
   font-size: inherit;
 }
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  @media (hover: hover) {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
