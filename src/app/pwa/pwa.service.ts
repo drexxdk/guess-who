@@ -54,28 +54,20 @@ export class PwaService {
     window.addEventListener('online', this.updateOnlineStatus.bind(this));
     window.addEventListener('offline', this.updateOnlineStatus.bind(this));
 
-    console.log('pwa service');
-
     if (this.swUpdate.isEnabled) {
-      console.log('pwa enabled');
-      interval(10 * 1000).subscribe(() => {
+      // every 5 minutes
+      interval(60 * 5 * 1000).subscribe(() => {
         swUpdate.checkForUpdate();
       });
 
-      this.swUpdate.versionUpdates.subscribe((evt) => {
-        console.log('all events', evt);
-      });
-
-      this.swUpdate.versionUpdates.pipe(
-        filter(
-          (evt: VersionEvent): evt is VersionReadyEvent =>
-            evt.type === 'VERSION_READY'
-        ),
-        map((evt: VersionReadyEvent) => {
-          console.log('VersionReadyEvent', evt);
+      this.swUpdate.versionUpdates.subscribe((evt: VersionEvent) => {
+        if (evt.type === 'VERSION_READY') {
+          console.info('PWA', evt);
           this.modalVersion.next(true);
-        })
-      );
+        } else if (evt.type === 'VERSION_INSTALLATION_FAILED') {
+          console.warn('PWA', evt);
+        }
+      });
     }
 
     this.loadModalPwa();
