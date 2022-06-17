@@ -1,5 +1,22 @@
+@import "~src/scss/scss-variables.scss";
+
 ul {
   list-style-type: none;
   display: flex;
   gap: 10px;
+}
+
+a {
+  display: block;
+  font-size: 1.4rem;
+  line-height: $header-height;
+  padding: 0 1rem;
+  color: $body-text;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $navbar-item-background-hover;
+      text-decoration: none;
+    }
+  }
 }

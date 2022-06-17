@@ -1,5 +1,3 @@
-@use "sass-rem" as *;
-
 $thumb-color: var(--thumb-color);
 $track-color: var(--track-color);
 
@@ -12,6 +10,8 @@ $header-text: var(--header-text);
 $header-border-color: var(--header-border-color);
 $header-border-width: 0.1rem;
 
+$navbar-item-background-hover: var(--navbar-item-background-hover);
+
 $button-background: var(--button-background);
 $button-background-hover: var(--button-background-hover);
 $button-text: var(--button-text);
@@ -23,6 +23,8 @@ $button-border-radius: 1rem;
 
 $link-color: var(--link-color);
 
+$error-color: var(--error-color);
+
 $image-border-radius: 2rem;
 
-$page-headline-font-size: 3.2rem;
+$page-headline-font-size: 1.8rem;

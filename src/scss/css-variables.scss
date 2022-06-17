@@ -11,6 +11,8 @@
   --header-text: black;
   --header-border-color: #ddd;
 
+  --navbar-item-background-hover: #ddd;
+
   --button-background: #eee;
   --button-background-hover: forestgreen;
   --button-text: black;
@@ -19,6 +21,8 @@
   --button-border-color-hover: darkgreen;
 
   --link-color: dodgerblue;
+
+  --error-color: red;
 
   @media (prefers-color-scheme: dark) {
     --thumb-color: #202020;
@@ -30,6 +34,8 @@
     --header-background: #202020;
     --header-text: white;
     --header-border-color: #303030;
+
+    --navbar-item-background-hover: #303030;
 
     --button-background: #202020;
     --button-background-hover: darkgreen;

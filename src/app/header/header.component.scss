@@ -7,6 +7,10 @@
   border-bottom: $header-border-width solid $header-border-color;
   background-color: $header-background;
   color: $header-text;
+}
+
+.logo {
+  line-height: $header-height;
   padding: 0 1rem;
 }
 

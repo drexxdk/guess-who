@@ -1,0 +1,6 @@
+@import "~src/scss/scss-variables.scss";
+
+label {
+  color: $error-color;
+  padding: 0 1rem;
+}

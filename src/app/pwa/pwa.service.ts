@@ -55,6 +55,7 @@ export class PwaService {
     window.addEventListener('offline', this.updateOnlineStatus.bind(this));
 
     if (this.swUpdate.isEnabled) {
+      swUpdate.checkForUpdate();
       // every 5 minutes
       interval(60 * 5 * 1000).subscribe(() => {
         swUpdate.checkForUpdate();
