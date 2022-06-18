@@ -6,10 +6,14 @@
     <img src="assets/blank.svg" />
     <div>
       <img src="assets/blank.svg" />
-      <div id="photos" [class.hover]="hover" [class.selected]="selected">
+      <div
+        id="photos"
+        [class.hover]="hover && !selected"
+        [class.selected]="selected"
+      >
         <app-image
           *ngFor="let photo of photos"
-          [class.hover]="hover === photo"
+          [class.hover]="hover === photo && !selected"
           [class.selected]="selected === photo"
           [class.disabled]="selected"
           [disabled]="selected ? true : false"

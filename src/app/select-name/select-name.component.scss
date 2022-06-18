@@ -2,14 +2,19 @@
 
 :host {
   overflow: auto;
+  max-width: $container-size;
+  margin: 0 auto;
+
   display: flex;
 
   @media (orientation: portrait) {
     flex-direction: column;
+    flex-grow: 1;
   }
 
   @media (orientation: landscape) {
     gap: 2rem;
+    justify-content: center;
   }
 }
 
@@ -63,6 +68,11 @@
   ul {
     display: grid;
     // grid-template-columns: repeat(auto-fit, minmax(min(35rem, 100%), 1fr));
+
+    @media (orientation: portrait) {
+      margin: 0 auto;
+      max-width: 50rem;
+    }
 
     gap: 1rem;
     list-style-type: none;

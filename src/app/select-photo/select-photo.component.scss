@@ -45,6 +45,7 @@
           display: grid;
         }
 
+        &.selected > app-image.selected ::ng-deep,
         &.hover > app-image.hover ::ng-deep {
           position: relative;
 
