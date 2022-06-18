@@ -4,12 +4,14 @@ $track-color: var(--track-color);
 $body-background: var(--body-background);
 $body-text: var(--body-text);
 
-$header-height: 5rem;
+$header-height: 4rem;
 $header-background: var(--header-background);
 $header-text: var(--header-text);
 $header-border-color: var(--header-border-color);
 $header-border-width: 0.1rem;
 
+$logo-background-hover: var(--logo-background-hover);
+$logo-text-hover: var(--logo-text-hover);
 $navbar-item-background-hover: var(--navbar-item-background-hover);
 
 $button-background: var(--button-background);
@@ -28,3 +30,8 @@ $error-color: var(--error-color);
 $image-border-radius: 2rem;
 
 $page-headline-font-size: 1.8rem;
+
+$container-width: 120rem;
+
+$image-max-size-breakpoint: 1000px;
+$image-max-size: 50rem;

@@ -3,11 +3,6 @@
 :host {
   position: relative;
   display: inline-flex;
-  height: 100%;
-
-  @media (orientation: landscape) {
-    align-items: center;
-  }
 
   > img {
     visibility: hidden;
@@ -24,8 +19,5 @@
     position: absolute;
     left: 0;
     right: 0;
-    aspect-ratio: 1;
-    background-size: cover;
-    background-position: center;
   }
 }

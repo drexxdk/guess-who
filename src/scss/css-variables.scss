@@ -11,7 +11,10 @@
   --header-text: black;
   --header-border-color: #ddd;
 
-  --navbar-item-background-hover: #ddd;
+  --logo-background-hover: var(--link-color);
+  --logo-text-hover: var(--body-text);
+
+  --navbar-item-background-hover: var(--header-border-color);
 
   --button-background: #eee;
   --button-background-hover: forestgreen;
