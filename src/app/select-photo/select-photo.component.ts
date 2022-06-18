@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./select-photo.component.scss'],
 })
 export class SelectPhotoComponent implements OnInit {
-  photos: string[] = ['profile-1', 'profile-2', 'profile-3', 'profile-4'];
+  photos: string[] = [
+    'assets/people/1.webp',
+    'assets/people/2.webp',
+    'assets/people/3.webp',
+    'assets/people/4.webp',
+  ];
   hover: string | undefined;
   selected: string | undefined;
 

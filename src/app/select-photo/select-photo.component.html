@@ -3,9 +3,9 @@
 </div>
 <div id="options">
   <div>
-    <img src="assets/blank.svg" />
+    <img src="assets/blank.svg" aria-hidden="true" />
     <div>
-      <img src="assets/blank.svg" />
+      <img src="assets/blank.svg" aria-hidden="true" />
       <div
         id="photos"
         [class.hover]="hover && !selected"
@@ -17,7 +17,8 @@
           [class.selected]="selected === photo"
           [class.disabled]="selected"
           [disabled]="selected ? true : false"
-          [image]="photo"
+          [src]="photo"
+          alt="Person face"
           (selected)="onSelected($event)"
           (hover)="onHover($event)"
         ></app-image>
