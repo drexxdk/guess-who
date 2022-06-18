@@ -1,13 +1,14 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-image[src][alt]',
+  selector: 'app-image[src][alt][ariaLabel]',
   templateUrl: './image.component.html',
   styleUrls: ['./image.component.scss'],
 })
 export class ImageComponent implements OnInit {
   @Input() src!: string;
   @Input() alt!: string;
+  @Input() ariaLabel!: string;
   @Input() text?: string;
   @Input() disabled: boolean = false;
 
@@ -20,21 +21,15 @@ export class ImageComponent implements OnInit {
   ngOnInit(): void {}
 
   onClick() {
-    if (!this.disabled) {
-      this.textShown = !this.textShown;
-      this.selected.emit(this.src);
-    }
+    this.textShown = !this.textShown;
+    this.selected.emit(this.src);
   }
 
   onPointerEnter() {
-    if (!this.disabled) {
-      this.hover.emit(this.src);
-    }
+    this.hover.emit(this.src);
   }
 
   onPointerLeave() {
-    if (!this.disabled) {
-      this.hover.emit(undefined);
-    }
+    this.hover.emit(undefined);
   }
 }

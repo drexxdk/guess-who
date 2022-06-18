@@ -90,6 +90,12 @@ img {
   pointer-events: none;
 }
 
-button:not([disabled]) {
-  cursor: pointer;
+button {
+  &[disabled] {
+    pointer-events: none;
+  }
+
+  &:not([disabled]) {
+    cursor: pointer;
+  }
 }

@@ -12,13 +12,14 @@
         [class.selected]="selected"
       >
         <app-image
-          *ngFor="let photo of photos"
+          *ngFor="let photo of photos; let i = index"
           [class.hover]="hover === photo && !selected"
           [class.selected]="selected === photo"
           [class.disabled]="selected"
           [disabled]="selected ? true : false"
           [src]="photo"
-          alt="Person face"
+          ariaLabel="Select person face {{ i + 1 }}"
+          alt="Person face {{ i }}"
           (selected)="onSelected($event)"
           (hover)="onHover($event)"
         ></app-image>
