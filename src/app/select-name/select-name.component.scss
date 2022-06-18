@@ -3,10 +3,13 @@
 :host {
   overflow: auto;
   display: flex;
-  gap: 2rem;
 
   @media (orientation: portrait) {
     flex-direction: column;
+  }
+
+  @media (orientation: landscape) {
+    gap: 2rem;
   }
 }
 
@@ -71,10 +74,10 @@
 
 h2 {
   font-size: $page-headline-font-size;
-
+  padding-bottom: 2rem;
   @media (orientation: portrait) {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 2rem;
     #options & {
       display: none;
     }
@@ -88,7 +91,6 @@ h2 {
     #options & {
       position: sticky;
       top: 0;
-      margin-bottom: 2rem;
       background-color: $body-background;
     }
   }
