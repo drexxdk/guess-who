@@ -12,8 +12,32 @@ export class SelectNameComponent implements OnInit {
     'Hans Mortensen',
     'Mikkel Hansen',
   ];
+  hover: string | undefined;
+  selected: string | undefined;
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  onSelected(selected: string) {
+    this.selected = selected;
+  }
+
+  onClick(name: string) {
+    if (!this.selected) {
+      this.selected = name;
+    }
+  }
+
+  onPointerEnter(name: string) {
+    if (!this.selected) {
+      this.hover = name;
+    }
+  }
+
+  onPointerLeave() {
+    if (!this.selected) {
+      this.hover = undefined;
+    }
+  }
 }

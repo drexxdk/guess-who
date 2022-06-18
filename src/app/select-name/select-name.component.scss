@@ -83,7 +83,7 @@
 }
 
 button {
-  padding: 1rem 2rem;
+  padding: 1.5rem 3rem;
   border: $button-border-width solid $button-border-color;
   border-radius: $button-border-radius;
   font-size: 1.6rem;
@@ -92,13 +92,30 @@ button {
   background-color: $button-background;
   color: $button-text;
   font-weight: bold;
+  position: relative;
 
-  @media (hover: hover) {
-    cursor: pointer;
-    &:hover {
-      background-color: $button-background-hover;
-      color: $button-text-hover;
-      border-color: $button-border-color-hover;
+  &.selected,
+  &.hover {
+    &:before {
+      content: "";
+      position: absolute;
+      top: -$button-border-width;
+      bottom: -$button-border-width;
+      left: -$button-border-width;
+      right: -$button-border-width;
+      border: 0.4rem solid $success-color;
+      z-index: 1;
+      pointer-events: none;
+      border-radius: $button-border-radius;
     }
   }
+
+  // @media (hover: hover) {
+  //   cursor: pointer;
+  //   &:hover {
+  //     background-color: $button-background-hover;
+  //     color: $button-text-hover;
+  //     border-color: $button-border-color-hover;
+  //   }
+  // }
 }

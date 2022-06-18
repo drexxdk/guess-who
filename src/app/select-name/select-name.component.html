@@ -8,9 +8,19 @@
   </div>
 </div>
 <div id="options">
-  <ul>
+  <ul [class.hover]="hover && !selected" [class.selected]="selected">
     <li *ngFor="let name of names">
-      <button>{{ name }}</button>
+      <button
+        [class.hover]="hover === name"
+        [class.selected]="selected === name"
+        [disabled]="selected"
+        [disabled]="selected ? true : false"
+        (pointerenter)="onPointerEnter(name)"
+        (pointerleave)="onPointerLeave()"
+        (click)="onClick(name)"
+      >
+        {{ name }}
+      </button>
     </li>
   </ul>
 </div>

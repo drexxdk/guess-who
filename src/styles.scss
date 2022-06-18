@@ -89,3 +89,7 @@ svg,
 img {
   pointer-events: none;
 }
+
+button:not([disabled]) {
+  cursor: pointer;
+}
