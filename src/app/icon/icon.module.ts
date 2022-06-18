@@ -8,7 +8,7 @@ import { InlineSVGModule } from 'ng-inline-svg-2';
   declarations: [IconComponent],
   imports: [
     CommonModule,
-    InlineSVGModule.forRoot({ baseUrl: '/assets/svg/' }),
+    InlineSVGModule.forRoot({ baseUrl: 'assets/svg/' }),
     HttpClientModule,
   ],
   exports: [IconComponent],
