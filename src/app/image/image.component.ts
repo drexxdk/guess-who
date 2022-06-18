@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-image',
+  selector: 'app-image[image]',
   templateUrl: './image.component.html',
-  styleUrls: ['./image.component.scss']
+  styleUrls: ['./image.component.scss'],
 })
 export class ImageComponent implements OnInit {
+  @Input() text?: string;
+  @Input() image!: string;
 
-  constructor() { }
+  textShown: boolean = true;
 
-  ngOnInit(): void {
+  @Output() selected = new EventEmitter<string>();
+
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  onClick() {
+    this.textShown = !this.textShown;
+    this.selected.emit(this.image);
   }
-
 }

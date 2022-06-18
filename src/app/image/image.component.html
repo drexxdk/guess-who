@@ -1,13 +1,14 @@
 <img src="assets/blank.svg" />
-<div>
+<div (click)="onClick()">
   <img
     srcset="
-              assets/people/profile-1-derivatives/profile-1-250w.jpg 250w,
-              assets/people/profile-1-derivatives/profile-1-500w.jpg  2x,
-              assets/people/profile-1-derivatives/profile-1-750w.jpg  3x,
-              assets/people/profile-1-derivatives/profile-1-1000w.jpg 4x
+              assets/people/{{image}}-derivatives/{{image}}-250w.jpg 250w,
+              assets/people/{{image}}-derivatives/{{image}}-500w.jpg  2x,
+              assets/people/{{image}}-derivatives/{{image}}-750w.jpg  3x,
+              assets/people/{{image}}-derivatives/{{image}}-1000w.jpg 4x
             "
-    src="assets/people/profile-1-derivatives/profile-1-1000w.jpg"
+    src="assets/people/{{ image }}-derivatives/{{ image }}-1000w.jpg"
     alt="Picture of person"
   />
+  <label *ngIf="textShown && text">{{ text }}</label>
 </div>

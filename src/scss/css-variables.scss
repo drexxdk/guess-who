@@ -27,6 +27,8 @@
 
   --error-color: red;
 
+  --image-overlay-background: rgba(0, 0, 0, 0.5);
+
   @media (prefers-color-scheme: dark) {
     --thumb-color: #202020;
     --track-color: black;

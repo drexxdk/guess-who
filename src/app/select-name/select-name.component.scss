@@ -20,6 +20,10 @@
   flex-shrink: 0;
   background-color: $body-background;
 
+  @media (orientation: portrait) {
+    padding-bottom: 2rem;
+  }
+
   @media (orientation: landscape) {
     display: flex;
     max-width: 50%;
@@ -50,48 +54,20 @@
 
 #options {
   width: 100%;
+  align-items: center;
 
   @media (orientation: landscape) {
     display: grid;
-    align-items: flex-start;
   }
 
-  > div {
+  ul {
     display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(min(35rem, 100%), 1fr));
 
-    ul {
-      display: grid;
-      // grid-template-columns: repeat(auto-fit, minmax(min(35rem, 100%), 1fr));
-
-      gap: 1rem;
-      list-style-type: none;
-      li {
-        display: flex;
-      }
-    }
-  }
-}
-
-h2 {
-  font-size: $page-headline-font-size;
-  padding-bottom: 2rem;
-  @media (orientation: portrait) {
-    text-align: center;
-    margin-top: 2rem;
-    #options & {
-      display: none;
-    }
-  }
-
-  @media (orientation: landscape) {
-    #image & {
-      display: none;
-    }
-
-    #options & {
-      position: sticky;
-      top: 0;
-      background-color: $body-background;
+    gap: 1rem;
+    list-style-type: none;
+    li {
+      display: flex;
     }
   }
 }

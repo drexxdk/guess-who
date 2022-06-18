@@ -18,20 +18,56 @@
   height: 100%;
   gap: 20px;
 
-  @media (min-aspect-ratio: 40/100) and (max-aspect-ratio: 100/100),
-    (min-aspect-ratio: 100/100) and (max-aspect-ratio: 100/40) {
+  // horizontal then vertical
+  // @media (min-aspect-ratio: 100/50) and (max-aspect-ratio: 100/1),
+  //   (min-aspect-ratio: 1/100) and (max-aspect-ratio: 50/100) {
+  // horizontal 4 || vertical 4
+
+  > div {
+    display: grid;
+    height: 100%;
+
+    > img {
+      display: none;
+    }
+
+    > div {
+      display: grid;
+
+      > img {
+        display: none;
+      }
+
+      > div {
+        gap: 2rem;
+        justify-content: center;
+
+        @media (orientation: landscape) {
+          display: flex;
+        }
+
+        @media (orientation: portrait) {
+          display: grid;
+        }
+      }
+    }
+  }
+  // }
+
+  // horizontal then vertical
+  @media (min-aspect-ratio: 100/100) and (max-aspect-ratio: 100/50),
+    (min-aspect-ratio: 50/100) and (max-aspect-ratio: 100/100) {
     // 2x2
     display: grid;
     justify-content: center;
     > div {
-      position: relative;
       display: inline-flex;
+      height: unset;
+      position: relative;
 
       > img {
+        display: block;
         visibility: hidden;
-      }
-
-      img {
         width: 100%;
         height: 100%;
         display: block;
@@ -57,41 +93,6 @@
 
           app-image {
             display: flex;
-          }
-        }
-      }
-    }
-  }
-
-  @media (min-aspect-ratio: 100/40) and (max-aspect-ratio: 100/1),
-    (min-aspect-ratio: 1/100) and (max-aspect-ratio: 40/100) {
-    // horizontal 4 || vertical 4
-
-    > div {
-      display: grid;
-      height: 100%;
-
-      > img {
-        display: none;
-      }
-
-      > div {
-        display: grid;
-
-        > img {
-          display: none;
-        }
-
-        > div {
-          gap: 2rem;
-          justify-content: center;
-
-          @media (orientation: landscape) {
-            display: flex;
-          }
-
-          @media (orientation: portrait) {
-            display: grid;
           }
         }
       }

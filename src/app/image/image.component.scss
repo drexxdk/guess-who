@@ -3,6 +3,7 @@
 :host {
   position: relative;
   display: inline-flex;
+  align-items: center;
 
   > img {
     visibility: hidden;
@@ -12,12 +13,26 @@
     width: 100%;
     height: 100%;
     display: block;
-    border-radius: $image-border-radius;
   }
 
   > div {
     position: absolute;
     left: 0;
     right: 0;
+    border-radius: $image-border-radius;
+    overflow: hidden;
+    cursor: pointer;
+
+    label {
+      position: absolute;
+      bottom: 0;
+      background: $image-overlay-background;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      font-size: $page-headline-font-size;
+      font-weight: bold;
+      text-align: center;
+    }
   }
 }
