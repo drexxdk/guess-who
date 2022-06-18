@@ -18,17 +18,27 @@
     }
   }
 }
+@mixin active {
+  text-decoration: none;
+  background-color: $logo-background-hover;
+  color: $logo-text-hover;
+}
 
 .logo {
   line-height: $header-height;
   padding: 0 2rem;
   border-right: $header-border-width solid $header-border-color;
+  height: $header-height;
+  display: flex;
+  color: white;
+
+  &.active-link {
+    @include active;
+  }
 
   @media (hover: hover) {
     &:hover {
-      text-decoration: none;
-      background-color: $logo-background-hover;
-      color: $logo-text-hover;
+      @include active;
     }
   }
 }

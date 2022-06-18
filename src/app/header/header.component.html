@@ -1,5 +1,12 @@
 <div>
-  <a routerLink="/" class="logo"><h1>Guess Who</h1></a>
+  <a
+    routerLink=""
+    class="logo"
+    routerLinkActive="active-link"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <app-icon svg="logo"></app-icon>
+  </a>
   <app-navbar></app-navbar>
   <div class="spacer"></div>
   <app-online-status></app-online-status>

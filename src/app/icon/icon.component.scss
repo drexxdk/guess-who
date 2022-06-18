@@ -1,0 +1,41 @@
+@use "sass-rem" as *;
+
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  //   &.rotate {
+  //     @for $kit-i from 1 through 360 {
+  //       $kit-size: ($kit-i * 2);
+
+  //       &-#{$kit-size} {
+  //         transform: rotate(#{$kit-size}deg);
+  //       }
+  //     }
+  //   }
+
+  //   > * {
+  //     width: 100%;
+  //     height: 100%;
+  //     display: block;
+  //   }
+
+  i {
+    @for $index from 1 through 10 {
+      $size: ($index * 2) + 8;
+
+      &[data-size="#{$size}"] {
+        width: rem(#{$size}px);
+        height: rem(#{$size}px);
+      }
+    }
+  }
+
+  ::ng-deep svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}

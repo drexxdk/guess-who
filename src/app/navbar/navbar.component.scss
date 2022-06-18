@@ -3,20 +3,27 @@
 ul {
   list-style-type: none;
   display: flex;
-  gap: 1rem;
+}
+
+@mixin active {
+  background-color: $navbar-item-background-hover;
+  text-decoration: none;
 }
 
 a {
   display: block;
   font-size: 1.4rem;
   line-height: $header-height;
-  padding: 0 1rem;
+  padding: 0 2rem;
   color: $body-text;
+
+  &.active-link {
+    @include active;
+  }
 
   @media (hover: hover) {
     &:hover {
-      background-color: $navbar-item-background-hover;
-      text-decoration: none;
+      @include active;
     }
   }
 }
