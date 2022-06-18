@@ -6,11 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./select-photo.component.scss'],
 })
 export class SelectPhotoComponent implements OnInit {
+  photos: string[] = ['profile-1', 'profile-2', 'profile-3', 'profile-4'];
+  hover: string | undefined;
+  selected: string | undefined;
+
   constructor() {}
 
   ngOnInit(): void {}
 
   onSelected(selected: string) {
-    console.log('selected', selected);
+    this.selected = selected;
+  }
+
+  onHover(hover: string | undefined) {
+    this.hover = hover;
   }
 }

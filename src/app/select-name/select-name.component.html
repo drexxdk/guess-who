@@ -5,9 +5,8 @@
 </div>
 <div id="options">
   <ul>
-    <li><button>Hans</button></li>
-    <li><button>Simon</button></li>
-    <li><button>Hans</button></li>
-    <li><button>Simon</button></li>
+    <li *ngFor="let name of names">
+      <button>{{ name }}</button>
+    </li>
   </ul>
 </div>

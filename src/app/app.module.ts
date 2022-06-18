@@ -8,9 +8,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { PwaService } from './pwa/pwa.service';
 import { InstallAppComponent } from './pwa/install-app/install-app.component';
+import { NewVersionComponent } from './pwa/new-version/new-version.component';
 
 @NgModule({
-  declarations: [AppComponent, InstallAppComponent],
+  declarations: [AppComponent, InstallAppComponent, NewVersionComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

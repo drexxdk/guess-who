@@ -81,6 +81,7 @@ button {
   text-align: left;
   background-color: $button-background;
   color: $button-text;
+  font-weight: bold;
 
   @media (hover: hover) {
     cursor: pointer;

@@ -1,5 +1,9 @@
 <img src="assets/blank.svg" />
-<div (click)="onClick()">
+<div
+  (click)="onClick()"
+  (pointerenter)="onPointerEnter()"
+  (pointerleave)="onPointerLeave()"
+>
   <img
     srcset="
               assets/people/{{image}}-derivatives/{{image}}-250w.jpg 250w,

@@ -5,6 +5,10 @@
   display: inline-flex;
   align-items: center;
 
+  &:not(.disabled) > div {
+    cursor: pointer;
+  }
+
   > img {
     visibility: hidden;
   }
@@ -21,7 +25,6 @@
     right: 0;
     border-radius: $image-border-radius;
     overflow: hidden;
-    cursor: pointer;
 
     label {
       position: absolute;
@@ -29,10 +32,11 @@
       background: $image-overlay-background;
       left: 0;
       right: 0;
-      padding: 20px;
+      padding: 2rem;
       font-size: $page-headline-font-size;
       font-weight: bold;
       text-align: center;
+      color: $image-overlay-text;
     }
   }
 }

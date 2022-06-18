@@ -7,7 +7,7 @@ import { NavbarModule } from '@portal-app/navbar/navbar.module';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [HeaderComponent, OnlineStatusComponent, NewVersionComponent],
+  declarations: [HeaderComponent, OnlineStatusComponent],
   imports: [CommonModule, NavbarModule, RouterModule],
   exports: [HeaderComponent],
 })

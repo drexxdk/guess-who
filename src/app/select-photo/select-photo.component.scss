@@ -16,12 +16,7 @@
 
 #options {
   height: 100%;
-  gap: 20px;
-
-  // horizontal then vertical
-  // @media (min-aspect-ratio: 100/50) and (max-aspect-ratio: 100/1),
-  //   (min-aspect-ratio: 1/100) and (max-aspect-ratio: 50/100) {
-  // horizontal 4 || vertical 4
+  gap: 2rem;
 
   > div {
     display: grid;
@@ -38,7 +33,7 @@
         display: none;
       }
 
-      > div {
+      #photos {
         gap: 2rem;
         justify-content: center;
 
@@ -49,10 +44,29 @@
         @media (orientation: portrait) {
           display: grid;
         }
+
+        &.hover > app-image.hover ::ng-deep {
+          position: relative;
+
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0.5rem;
+            bottom: 0.5rem;
+            left: 0.5rem;
+            right: 0.5rem;
+            border: 0.5rem solid $body-background;
+            z-index: 1;
+            pointer-events: none;
+            border-radius: 2rem;
+          }
+        }
+        &.selected > app-image:not(.selected) {
+          opacity: 0.5;
+        }
       }
     }
   }
-  // }
 
   // horizontal then vertical
   @media (min-aspect-ratio: 100/100) and (max-aspect-ratio: 100/50),
@@ -79,7 +93,7 @@
         left: 0;
         right: 0;
 
-        > div {
+        #photos {
           position: absolute;
           top: 0;
           bottom: 0;

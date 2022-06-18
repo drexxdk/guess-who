@@ -6,22 +6,16 @@
     <img src="assets/blank.svg" />
     <div>
       <img src="assets/blank.svg" />
-      <div>
+      <div id="photos" [class.hover]="hover" [class.selected]="selected">
         <app-image
-          image="profile-1"
+          *ngFor="let photo of photos"
+          [class.hover]="hover === photo"
+          [class.selected]="selected === photo"
+          [class.disabled]="selected"
+          [disabled]="selected ? true : false"
+          [image]="photo"
           (selected)="onSelected($event)"
-        ></app-image>
-        <app-image
-          image="profile-2"
-          (selected)="onSelected($event)"
-        ></app-image>
-        <app-image
-          image="profile-3"
-          (selected)="onSelected($event)"
-        ></app-image>
-        <app-image
-          image="profile-4"
-          (selected)="onSelected($event)"
+          (hover)="onHover($event)"
         ></app-image>
       </div>
     </div>
