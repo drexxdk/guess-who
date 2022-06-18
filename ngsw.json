@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1655595337180,
+  "timestamp": 1655596048499,
   "index": "https://drexxdk.github.io/guess-who/index.html",
   "assetGroups": [
     {
@@ -19,7 +19,6 @@
         "https://drexxdk.github.io/guess-who/assets/icons/favicon-16x16.png",
         "https://drexxdk.github.io/guess-who/assets/icons/favicon-32x32.png",
         "https://drexxdk.github.io/guess-who/assets/icons/favicon.ico",
-        "https://drexxdk.github.io/guess-who/assets/icons/mstile-150x150.png",
         "https://drexxdk.github.io/guess-who/assets/icons/safari-pinned-tab.svg",
         "https://drexxdk.github.io/guess-who/common.f3ed1be436248740.js",
         "https://drexxdk.github.io/guess-who/favicon.ico",
@@ -61,7 +60,6 @@
     "https://drexxdk.github.io/guess-who/assets/icons/favicon-16x16.png": "237dc27415fcc1852799618c6259ae97523f258a",
     "https://drexxdk.github.io/guess-who/assets/icons/favicon-32x32.png": "e1eba7ff3b775f2a7cd9dd53a618a4b4f3e70d3d",
     "https://drexxdk.github.io/guess-who/assets/icons/favicon.ico": "cafe2b2f3a00036bee264f3de93111923ceb8b70",
-    "https://drexxdk.github.io/guess-who/assets/icons/mstile-150x150.png": "d602337a50b3143abe73e975a682d5f13f13ec60",
     "https://drexxdk.github.io/guess-who/assets/icons/safari-pinned-tab.svg": "aec0ffea181035f786b40179677f9ddf47fd0456",
     "https://drexxdk.github.io/guess-who/assets/people/1.webp": "90df3a35cdaada4740f5b44114fe24e07e62e848",
     "https://drexxdk.github.io/guess-who/assets/people/2.webp": "284d415899054ae8e79089689552af61ab5f33ab",
@@ -70,7 +68,7 @@
     "https://drexxdk.github.io/guess-who/assets/svg/logo.svg": "38ed9a0b2db5c1586f378dd970a8413dbd5b16db",
     "https://drexxdk.github.io/guess-who/common.f3ed1be436248740.js": "47356dbed12d9341d40c7e70bf5cd40de8b9cc04",
     "https://drexxdk.github.io/guess-who/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://drexxdk.github.io/guess-who/index.html": "9812e9b75065adcd96aeacdaf67ace3699c537f4",
+    "https://drexxdk.github.io/guess-who/index.html": "da99d6ebc3c0cf909b91d8b6fbd6311ec855e783",
     "https://drexxdk.github.io/guess-who/main.535ba6c05e7ffb3d.js": "e54ed24aab3f8d9089175e1c183e2c8682d67a32",
     "https://drexxdk.github.io/guess-who/manifest.webmanifest": "5bdf22b043c7905f13f643ccb7a4052031596bb1",
     "https://drexxdk.github.io/guess-who/polyfills.e42e552d7edef170.js": "10413118279354a371ee283a79add7e7b9ad2a57",
