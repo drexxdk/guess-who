@@ -29,14 +29,14 @@ export class SelectNameComponent implements OnInit {
     }
   }
 
-  onPointerEnter(name: string) {
-    if (!this.selected) {
+  onPointerEnter(name: string, $event: PointerEvent) {
+    if (!this.selected && $event.pointerType === 'mouse') {
       this.hover = name;
     }
   }
 
-  onPointerLeave() {
-    if (!this.selected) {
+  onPointerLeave($event: PointerEvent) {
+    if (!this.selected && $event.pointerType === 'mouse') {
       this.hover = undefined;
     }
   }

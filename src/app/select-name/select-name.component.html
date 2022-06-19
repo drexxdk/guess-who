@@ -16,8 +16,8 @@
         [class.selected]="selected === name"
         [disabled]="selected"
         [disabled]="selected ? true : false"
-        (pointerenter)="onPointerEnter(name)"
-        (pointerleave)="onPointerLeave()"
+        (pointerenter)="onPointerEnter(name, $event)"
+        (pointerleave)="onPointerLeave($event)"
         (click)="onClick(name)"
       >
         {{ name }}

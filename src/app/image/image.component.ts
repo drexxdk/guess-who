@@ -25,11 +25,15 @@ export class ImageComponent implements OnInit {
     this.selected.emit(this.src);
   }
 
-  onPointerEnter() {
-    this.hover.emit(this.src);
+  onPointerEnter($event: PointerEvent) {
+    if ($event.pointerType === 'mouse') {
+      this.hover.emit(this.src);
+    }
   }
 
-  onPointerLeave() {
-    this.hover.emit(undefined);
+  onPointerLeave($event: PointerEvent) {
+    if ($event.pointerType === 'mouse') {
+      this.hover.emit(undefined);
+    }
   }
 }

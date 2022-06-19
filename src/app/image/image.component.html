@@ -2,8 +2,8 @@
 <button
   [disabled]="disabled"
   (click)="onClick()"
-  (pointerenter)="onPointerEnter()"
-  (pointerleave)="onPointerLeave()"
+  (pointerenter)="onPointerEnter($event)"
+  (pointerleave)="onPointerLeave($event)"
   [attr.aria-label]="ariaLabel"
 >
   <img [src]="src" [alt]="alt" />
