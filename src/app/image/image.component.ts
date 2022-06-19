@@ -32,11 +32,4 @@ export class ImageComponent implements OnInit {
   onPointerLeave($event: PointerEvent) {
     this.hover.emit(undefined);
   }
-
-  onRightClick($event: Event) {
-    if ($event instanceof PointerEvent && $event.pointerType === 'touch') {
-      $event.preventDefault();
-      this.selected.emit(this.src);
-    }
-  }
 }

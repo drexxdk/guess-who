@@ -4,7 +4,6 @@
   (click)="onClick()"
   (pointerenter)="onPointerEnter($event)"
   (pointerleave)="onPointerLeave($event)"
-  (contextmenu)="onRightClick($event)"
   [attr.aria-label]="ariaLabel"
 >
   <img [src]="src" [alt]="alt" />
@@ -13,5 +12,4 @@
     [text]="text"
     [align]="'center'"
   ></app-headline>
-  <!-- <label *ngIf="textShown && text">{{ text }}</label> -->
 </button>
