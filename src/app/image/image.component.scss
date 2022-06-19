@@ -1,12 +1,6 @@
 @import "~src/scss/scss-variables.scss";
 
-$image-overlay-background: var(--image-overlay-background);
-$image-overlay-text: var(--image-overlay-text);
-
 :host {
-  --image-overlay-background: rgba(0, 0, 0, 0.5);
-  --image-overlay-text: white;
-
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -43,6 +37,13 @@ $image-overlay-text: var(--image-overlay-text);
     border-radius: 2rem;
     overflow: hidden;
 
+    @media (hover: hover) {
+      &:hover label {
+        background-color: $image-overlay-background-hover;
+        color: $image-overlay-text-hover;
+      }
+    }
+
     label {
       position: absolute;
       bottom: 0;
@@ -54,6 +55,7 @@ $image-overlay-text: var(--image-overlay-text);
       font-weight: bold;
       text-align: center;
       color: $image-overlay-text;
+      pointer-events: none;
     }
   }
 }
