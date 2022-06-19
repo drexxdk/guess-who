@@ -51,11 +51,13 @@
       left: 0;
       right: 0;
       padding: 2rem;
-      font-size: 1.8rem;
-      font-weight: bold;
+      font-size: $headline-font-size;
+      font-weight: $headline-font-weight;
       text-align: center;
       color: $image-overlay-text;
       pointer-events: none;
+      font-family: $headline-font-family;
+      letter-spacing: $headline-font-letter-spacing;
     }
   }
 }

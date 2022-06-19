@@ -4,6 +4,7 @@
 
 @import "scss/scss-variables";
 @import "scss/css-variables";
+@import "scss/fonts";
 
 * {
   margin: 0;
@@ -48,13 +49,12 @@ html {
 body {
   min-height: 100%;
   background-color: $body-background-color;
-  // user-select: none;
+  letter-spacing: $body-font-letter-spacing;
 }
 
 body,
-button,
-text {
-  font-family: sans-serif;
+button {
+  font-family: $body-font-family;
   color: $body-color;
 }
 

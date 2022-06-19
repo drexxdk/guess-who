@@ -69,6 +69,8 @@ $theme-colors: (
 );
 
 $body-background-color: var(--body-background-color);
+$body-font-family: Heebo, Arial, Helvetica, sans-serif;
+$body-font-letter-spacing: 0.1rem;
 $body-color: $gray-900;
 $link-color: $primary;
 $thumb-color: var(--thumb-color);
@@ -85,3 +87,8 @@ $image-overlay-background: rgba(0, 0, 0, 0.5);
 $image-overlay-text: #fff;
 $image-overlay-background-hover: rgba(0, 0, 0, 0.6);
 $image-overlay-text-hover: #fff;
+
+$headline-font-family: Heebo, Arial, Helvetica, sans-serif;
+$headline-font-letter-spacing: 0.1rem;
+$headline-font-size: 1.8rem;
+$headline-font-weight: bold;

@@ -1,6 +1,6 @@
 @import "~src/scss/scss-variables.scss";
 @import "~src/scss/pwa-modal.scss";
 
-:host {
+:host:not(:empty) {
   @include pwa-modal;
 }
