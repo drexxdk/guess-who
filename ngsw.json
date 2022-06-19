@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1655599712816,
+  "timestamp": 1655650718556,
   "index": "https://drexxdk.github.io/guess-who/index.html",
   "assetGroups": [
     {
@@ -11,8 +11,8 @@
         "ignoreVary": true
       },
       "urls": [
-        "https://drexxdk.github.io/guess-who/528.6049efd03c80744a.js",
-        "https://drexxdk.github.io/guess-who/828.6935ddecd2896e2a.js",
+        "https://drexxdk.github.io/guess-who/341.11a3ded5859be10d.js",
+        "https://drexxdk.github.io/guess-who/828.642f7848124763a5.js",
         "https://drexxdk.github.io/guess-who/assets/icons/android-chrome-192x192.png",
         "https://drexxdk.github.io/guess-who/assets/icons/android-chrome-512x512.png",
         "https://drexxdk.github.io/guess-who/assets/icons/apple-touch-icon.png",
@@ -20,14 +20,14 @@
         "https://drexxdk.github.io/guess-who/assets/icons/favicon-32x32.png",
         "https://drexxdk.github.io/guess-who/assets/icons/favicon.ico",
         "https://drexxdk.github.io/guess-who/assets/icons/safari-pinned-tab.svg",
-        "https://drexxdk.github.io/guess-who/common.0201832bbb0cc504.js",
+        "https://drexxdk.github.io/guess-who/common.97159f5b27620d61.js",
         "https://drexxdk.github.io/guess-who/favicon.ico",
         "https://drexxdk.github.io/guess-who/index.html",
-        "https://drexxdk.github.io/guess-who/main.535ba6c05e7ffb3d.js",
+        "https://drexxdk.github.io/guess-who/main.c428f8cfce7cd970.js",
         "https://drexxdk.github.io/guess-who/manifest.webmanifest",
         "https://drexxdk.github.io/guess-who/polyfills.e42e552d7edef170.js",
-        "https://drexxdk.github.io/guess-who/runtime.e172e09a0a198157.js",
-        "https://drexxdk.github.io/guess-who/styles.bf43bd5d60379111.css"
+        "https://drexxdk.github.io/guess-who/runtime.2b01ba7bd58c0414.js",
+        "https://drexxdk.github.io/guess-who/styles.b960505884172d1d.css"
       ],
       "patterns": []
     },
@@ -44,15 +44,19 @@
         "https://drexxdk.github.io/guess-who/assets/people/2.webp",
         "https://drexxdk.github.io/guess-who/assets/people/3.webp",
         "https://drexxdk.github.io/guess-who/assets/people/4.webp",
-        "https://drexxdk.github.io/guess-who/assets/svg/logo.svg"
+        "https://drexxdk.github.io/guess-who/assets/svg/check.svg",
+        "https://drexxdk.github.io/guess-who/assets/svg/ios-menu.svg",
+        "https://drexxdk.github.io/guess-who/assets/svg/loading.svg",
+        "https://drexxdk.github.io/guess-who/assets/svg/logo.svg",
+        "https://drexxdk.github.io/guess-who/assets/svg/x-mark.svg"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "https://drexxdk.github.io/guess-who/528.6049efd03c80744a.js": "9423b24c3779727bb28509cf3f4bc588a59b8b94",
-    "https://drexxdk.github.io/guess-who/828.6935ddecd2896e2a.js": "24f3944eea6ca1a60e0ef4113a2f479fafc99b14",
+    "https://drexxdk.github.io/guess-who/341.11a3ded5859be10d.js": "d4e9974810424195ebb427585d936702f3bceaef",
+    "https://drexxdk.github.io/guess-who/828.642f7848124763a5.js": "295af213ffc1ab232f307c103885f7e9c1b4e089",
     "https://drexxdk.github.io/guess-who/assets/blank.svg": "f23e5916a5b85d8fdfe49f2cb7da6a40968352f1",
     "https://drexxdk.github.io/guess-who/assets/icons/android-chrome-192x192.png": "b9349d8b8fd104e88f0d3255e0c4e6cf619d6073",
     "https://drexxdk.github.io/guess-who/assets/icons/android-chrome-512x512.png": "19652da937801c2456d6832a8c76152814684dbf",
@@ -65,15 +69,19 @@
     "https://drexxdk.github.io/guess-who/assets/people/2.webp": "284d415899054ae8e79089689552af61ab5f33ab",
     "https://drexxdk.github.io/guess-who/assets/people/3.webp": "e7794c737b430034de5beccc8305517966564d24",
     "https://drexxdk.github.io/guess-who/assets/people/4.webp": "0c822efc1a594561b517496e66b81120eca4dd76",
+    "https://drexxdk.github.io/guess-who/assets/svg/check.svg": "41861e0943565f0901d3f8c40287e48592fc748a",
+    "https://drexxdk.github.io/guess-who/assets/svg/ios-menu.svg": "5cf097284104180692073375e263536cbcabdd5c",
+    "https://drexxdk.github.io/guess-who/assets/svg/loading.svg": "2849a0ff23fc7cf9352ba7c3fed0177363958e5a",
     "https://drexxdk.github.io/guess-who/assets/svg/logo.svg": "38ed9a0b2db5c1586f378dd970a8413dbd5b16db",
-    "https://drexxdk.github.io/guess-who/common.0201832bbb0cc504.js": "7a7c7c73808a7aa7d4b79b58d4602fe31e5ab5ff",
+    "https://drexxdk.github.io/guess-who/assets/svg/x-mark.svg": "3b7365176da8f0bfac418ad2f032fa1465248666",
+    "https://drexxdk.github.io/guess-who/common.97159f5b27620d61.js": "cf04b7a088de2f47683bffbff4629ce1a541c0e2",
     "https://drexxdk.github.io/guess-who/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://drexxdk.github.io/guess-who/index.html": "2628b1ccafe6de80cf9b54818213190dc337536e",
-    "https://drexxdk.github.io/guess-who/main.535ba6c05e7ffb3d.js": "e54ed24aab3f8d9089175e1c183e2c8682d67a32",
+    "https://drexxdk.github.io/guess-who/index.html": "4fc1d5d8d21daf23da2a9773ee19ec2ab07e65b3",
+    "https://drexxdk.github.io/guess-who/main.c428f8cfce7cd970.js": "8f7c2e81498381a1127d844369efff42fa5df9c5",
     "https://drexxdk.github.io/guess-who/manifest.webmanifest": "5bdf22b043c7905f13f643ccb7a4052031596bb1",
     "https://drexxdk.github.io/guess-who/polyfills.e42e552d7edef170.js": "10413118279354a371ee283a79add7e7b9ad2a57",
-    "https://drexxdk.github.io/guess-who/runtime.e172e09a0a198157.js": "1e18d8d78266671beec6057f1ddab2aa5b8e6158",
-    "https://drexxdk.github.io/guess-who/styles.bf43bd5d60379111.css": "ce8f5adcd63101378e8432a923eb659c5fac8f9a"
+    "https://drexxdk.github.io/guess-who/runtime.2b01ba7bd58c0414.js": "7883e36ff2982b15ba5debec5d909bec544c5d9c",
+    "https://drexxdk.github.io/guess-who/styles.b960505884172d1d.css": "c369bbfd9e7b3e408182b55f73dd64275e68d17a"
   },
   "navigationUrls": [
     {
