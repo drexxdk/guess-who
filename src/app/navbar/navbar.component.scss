@@ -5,11 +5,6 @@ ul {
   display: flex;
 }
 
-@mixin active {
-  background-color: $gray-400;
-  text-decoration: none;
-}
-
 a {
   display: block;
   font-size: 1.4rem;
@@ -17,7 +12,13 @@ a {
   padding: 0 2rem;
   color: $body-color;
 
-  &.active-link {
+  @mixin active {
+    background-color: $gray-400;
+    text-decoration: none;
+  }
+
+  &.active-link,
+  &:active {
     @include active;
   }
 

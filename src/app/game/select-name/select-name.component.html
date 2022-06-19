@@ -18,6 +18,7 @@
         [disabled]="selected ? true : false"
         (pointerenter)="onPointerEnter(name, $event)"
         (pointerleave)="onPointerLeave($event)"
+        (contextmenu)="onRightClick(name, $event)"
         (click)="onClick(name)"
       >
         {{ name }}

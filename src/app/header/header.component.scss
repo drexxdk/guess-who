@@ -18,11 +18,6 @@
     }
   }
 }
-@mixin active {
-  text-decoration: none;
-  background-color: $primary;
-  color: $primary-accent;
-}
 
 .logo {
   line-height: $header-height;
@@ -32,7 +27,14 @@
   display: flex;
   color: $primary;
 
-  &.active-link {
+  @mixin active {
+    text-decoration: none;
+    background-color: $primary;
+    color: $primary-accent;
+  }
+
+  &.active-link,
+  &:active {
     @include active;
   }
 

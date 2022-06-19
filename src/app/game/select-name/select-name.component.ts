@@ -30,14 +30,21 @@ export class SelectNameComponent implements OnInit {
   }
 
   onPointerEnter(name: string, $event: PointerEvent) {
-    if (!this.selected && $event.pointerType === 'mouse') {
-      this.hover = name;
-    }
+    this.hover = name;
   }
 
   onPointerLeave($event: PointerEvent) {
-    if (!this.selected && $event.pointerType === 'mouse') {
-      this.hover = undefined;
+    this.hover = undefined;
+  }
+
+  onRightClick(name: string, $event: Event) {
+    if (
+      !this.selected &&
+      $event instanceof PointerEvent &&
+      $event.pointerType === 'touch'
+    ) {
+      $event.preventDefault();
+      this.selected = name;
     }
   }
 }
