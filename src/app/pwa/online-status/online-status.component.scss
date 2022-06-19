@@ -1,6 +1,13 @@
 @import "~src/scss/scss-variables.scss";
-
-label {
-  color: $danger;
+:host {
+  display: block;
+  background-color: $danger;
   padding: 0 1rem;
+  line-height: $header-height;
+  flex-shrink: 0;
+}
+label {
+  display: block;
+  color: $danger-accent;
+  font-weight: bold;
 }
