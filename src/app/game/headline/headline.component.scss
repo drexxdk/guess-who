@@ -1,0 +1,30 @@
+@import "~src/scss/scss-variables.scss";
+
+:host {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  &[data-align="left"] {
+    text-align: left;
+  }
+  &[data-align="center"] {
+    text-align: center;
+  }
+  &[data-align="right"] {
+    text-align: right;
+  }
+
+  @media (orientation: portrait) and (min-width: 300px) and (max-width: 540px) {
+    font-size: 6vw;
+  }
+  @media (orientation: portrait) and (min-width: 300px) and (min-width: 541px) {
+    font-size: 3.5rem;
+  }
+  @media (orientation: landscape) and (min-height: 340px) and (max-height: 580px) {
+    font-size: 6vh;
+  }
+  @media (orientation: landscape) and (min-height: 340px) and (min-height: 581px) {
+    font-size: 3.5rem;
+  }
+}

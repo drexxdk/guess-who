@@ -44,20 +44,15 @@
       }
     }
 
-    label {
+    app-headline {
       position: absolute;
       bottom: 0;
-      background: $image-overlay-background;
       left: 0;
       right: 0;
       padding: 2rem;
-      font-size: $headline-font-size;
-      font-weight: $headline-font-weight;
-      text-align: center;
-      color: $image-overlay-text;
       pointer-events: none;
-      font-family: $headline-font-family;
-      letter-spacing: $headline-font-letter-spacing;
+      background: $image-overlay-background;
+      color: $image-overlay-text;
     }
   }
 }
