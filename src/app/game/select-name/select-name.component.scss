@@ -23,7 +23,8 @@
   top: 0;
   overflow: hidden;
   flex-shrink: 0;
-  background-color: $body-background;
+  background-color: $body-background-color;
+  z-index: 1;
 
   @media (orientation: portrait) {
     padding-bottom: 2rem;
@@ -88,18 +89,17 @@
 
 button {
   padding: 1.5rem 3rem;
-  border: $button-border-width solid $button-border-color;
-  border-radius: $button-border-radius;
+  border: 0.1rem solid $gray-400;
+  border-radius: 1rem;
   font-size: 1.6rem;
   width: 100%;
   text-align: left;
-  background-color: $button-background;
-  color: $button-text;
+  background-color: $gray-200;
   font-weight: bold;
   position: relative;
 
   &.selected,
   &.hover {
-    box-shadow: inset 0px 0px 0px 5px $success-color;
+    box-shadow: inset 0px 0px 0px 5px $success;
   }
 }

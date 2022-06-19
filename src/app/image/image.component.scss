@@ -1,6 +1,12 @@
 @import "~src/scss/scss-variables.scss";
 
+$image-overlay-background: var(--image-overlay-background);
+$image-overlay-text: var(--image-overlay-text);
+
 :host {
+  --image-overlay-background: rgba(0, 0, 0, 0.5);
+  --image-overlay-text: white;
+
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -12,8 +18,7 @@
   &.selected,
   &.hover {
     button {
-      background-color: transparent;
-      box-shadow: inset 0px 0px 0px 5px $success-color;
+      box-shadow: inset 0px 0px 0px 5px $success;
       img {
         z-index: -1;
         position: relative;
@@ -35,7 +40,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    border-radius: $image-border-radius;
+    border-radius: 2rem;
     overflow: hidden;
 
     label {
@@ -45,7 +50,7 @@
       left: 0;
       right: 0;
       padding: 2rem;
-      font-size: $page-headline-font-size;
+      font-size: 1.8rem;
       font-weight: bold;
       text-align: center;
       color: $image-overlay-text;

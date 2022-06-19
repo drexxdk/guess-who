@@ -1,9 +1,9 @@
 @import "~src/scss/scss-variables.scss";
 
 :host {
-  border-bottom: $header-border-width solid $header-border-color;
-  background-color: $header-background;
-  color: $header-text;
+  border-bottom: 0.1rem solid $gray-400;
+  background-color: $gray-200;
+  color: $body-color;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -20,17 +20,17 @@
 }
 @mixin active {
   text-decoration: none;
-  background-color: $logo-background-hover;
-  color: $logo-text-hover;
+  background-color: $primary;
+  color: $primary-accent;
 }
 
 .logo {
   line-height: $header-height;
-  padding: 0 2rem;
-  border-right: $header-border-width solid $header-border-color;
+  padding: 0 1rem;
+  border-right: 0.1rem solid $gray-200;
   height: $header-height;
   display: flex;
-  color: white;
+  color: $primary;
 
   &.active-link {
     @include active;

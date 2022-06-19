@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 import { PwaService } from './pwa/pwa.service';
 import { InstallAppComponent } from './pwa/install-app/install-app.component';
 import { NewVersionComponent } from './pwa/new-version/new-version.component';
+import { IconModule } from './icon/icon.module';
 
 @NgModule({
   declarations: [AppComponent, InstallAppComponent, NewVersionComponent],
@@ -16,6 +17,7 @@ import { NewVersionComponent } from './pwa/new-version/new-version.component';
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
+    IconModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable

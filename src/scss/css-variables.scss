@@ -1,58 +1,59 @@
 @use "scss-variables.scss";
 
 :root {
-  --theme-color: dodgerblue;
+  --white: #fff;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6f7780;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --black: #000;
 
-  --default-layout-background: #eee;
-  ----default-layout-border-color: #ddd;
+  --blue: #0072ed;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #be5a06;
+  --yellow: #ffc107;
+  --green: #218838;
+  --teal: #20c997;
+  --cyan: #138294;
 
-  --thumb-color: #909090;
-  --track-color: white;
+  --primary: var(--blue);
+  --secondary: var(--gray-600);
+  --success: var(--green);
+  --info: var(--cyan);
+  --warning: var(--orange);
+  --danger: var(--red);
+  --light: var(--gray-100);
+  --dark: var(--gray-800);
 
-  --body-background: white;
-  --body-text: black;
+  --body-background-color: #f1f1f1;
 
-  --header-background: var(--default-layout-background);
-  --header-text: var(--body-text);
-  --header-border-color: var(----default-layout-border-color);
-
-  --logo-background-hover: var(--link-color);
-  --logo-text-hover: white;
-
-  --navbar-item-background-hover: var(----default-layout-border-color);
-
-  --button-background: var(--header-background);
-  --button-background-hover: forestgreen;
-  --button-text: var(--body-text);
-  --button-text-hover: white;
-  --button-border-color: var(----default-layout-border-color);
-  --button-border-color-hover: darkgreen;
-
-  --link-color: var(--theme-color);
-  --success-color: darkgreen;
-  --error-color: darkred;
-
-  --image-overlay-background: rgba(0, 0, 0, 0.5);
-  --image-overlay-text: white;
-
-  --pwa-background: var(--default-layout-background);
-  --pwa-border-color: var(------default-layout-border-color);
+  --thumb-color: var(--gray-600);
+  --track-color: var(--gray-200);
 
   @media (prefers-color-scheme: dark) {
-    --default-layout-background: #202020;
-    ----default-layout-border-color: #303030;
+    --white: #000;
+    --gray-100: #21201f;
+    --gray-200: #302d2a;
+    --gray-300: #3b3733;
+    --gray-400: #4b453f;
+    --gray-500: #6c645c;
+    --gray-600: #aaa299;
+    --gray-700: #d0c9c2;
+    --gray-800: #e5dfd9;
+    --gray-900: #f8f4f0;
+    --black: #fff;
 
-    --thumb-color: #202020;
-    --track-color: black;
+    --body-background-color: #0d0d0d;
 
-    --body-background: black;
-    --body-text: white;
-
-    --button-background-hover: darkgreen;
-    --button-text-hover: var(--body-text);
-    --button-border-color-hover: forestgreen;
-
-    --success-color: forestgreen;
-    --error-color: firebrick;
+    --thumb-color: var(--gray-500);
+    --track-color: var(--gray-100);
   }
 }

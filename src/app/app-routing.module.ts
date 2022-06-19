@@ -12,14 +12,14 @@ const routes: Routes = [
   {
     path: 'name',
     loadChildren: () =>
-      import('@portal-app/select-name/select-name.module').then(
+      import('@portal-app/game/select-name/select-name.module').then(
         (module) => module.SelectNameModule
       ),
   },
   {
     path: 'photo',
     loadChildren: () =>
-      import('@portal-app/select-photo/select-photo.module').then(
+      import('@portal-app/game/select-photo/select-photo.module').then(
         (module) => module.SelectPhotoModule
       ),
   },

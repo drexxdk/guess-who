@@ -47,8 +47,7 @@ html {
 }
 body {
   min-height: 100%;
-  background-color: $body-background;
-  color: $body-text;
+  background-color: $body-background-color;
   // user-select: none;
 }
 
@@ -56,6 +55,7 @@ body,
 button,
 text {
   font-family: sans-serif;
+  color: $body-color;
 }
 
 img {
@@ -70,7 +70,8 @@ h4,
 h5,
 h6,
 p,
-a {
+a,
+label {
   font-size: $base-font-size;
 }
 
@@ -91,6 +92,7 @@ img {
 }
 
 button {
+  background-color: transparent;
   border: none;
   &[disabled] {
     pointer-events: none;

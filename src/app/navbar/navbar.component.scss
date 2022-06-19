@@ -6,7 +6,7 @@ ul {
 }
 
 @mixin active {
-  background-color: $navbar-item-background-hover;
+  background-color: $gray-400;
   text-decoration: none;
 }
 
@@ -15,7 +15,7 @@ a {
   font-size: 1.4rem;
   line-height: $header-height;
   padding: 0 2rem;
-  color: $body-text;
+  color: $body-color;
 
   &.active-link {
     @include active;
