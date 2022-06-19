@@ -47,7 +47,7 @@ $colors: (
 );
 
 $primary: var(--primary);
-$primary-accent: $white;
+$primary-accent: var(--primary-accent);
 $secondary: var(--secondary);
 $success: var(--success);
 $info: var(--info);
