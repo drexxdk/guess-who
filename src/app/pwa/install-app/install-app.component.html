@@ -14,10 +14,10 @@
       >
         Add this WEB app to home screen
       </button>
-      <label
-        >To install this WEB app on your device, tap the "Menu" button
-        <app-icon svg="ios-menu" [size]="16"></app-icon> and then "Add to home
-        screen" button <i class="bi bi-plus-square"></i
+      <label *ngIf="sub.modalPwaPlatform === 'IOS'"
+        >To install this WEB app on your device, tap the <b>"Menu"</b> button
+        <app-icon svg="ios-menu" [size]="16"></app-icon> and then
+        <b>"Add to home screen"</b> button <i class="bi bi-plus-square"></i
       ></label>
     </div>
     <button type="button" aria-label="Close" (click)="onClickClosePwa()">
