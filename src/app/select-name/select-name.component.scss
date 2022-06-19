@@ -67,6 +67,8 @@
 
   ul {
     display: grid;
+    gap: 1rem;
+    list-style-type: none;
     // grid-template-columns: repeat(auto-fit, minmax(min(35rem, 100%), 1fr));
 
     @media (orientation: portrait) {
@@ -74,8 +76,10 @@
       max-width: 50rem;
     }
 
-    gap: 1rem;
-    list-style-type: none;
+    &.selected button:not(.selected) {
+      opacity: 0.5;
+    }
+
     li {
       display: flex;
     }
@@ -96,26 +100,6 @@ button {
 
   &.selected,
   &.hover {
-    &:before {
-      content: "";
-      position: absolute;
-      top: -$button-border-width;
-      bottom: -$button-border-width;
-      left: -$button-border-width;
-      right: -$button-border-width;
-      border: 0.4rem solid $success-color;
-      z-index: 1;
-      pointer-events: none;
-      border-radius: $button-border-radius;
-    }
+    box-shadow: inset 0px 0px 0px 5px $success-color;
   }
-
-  // @media (hover: hover) {
-  //   cursor: pointer;
-  //   &:hover {
-  //     background-color: $button-background-hover;
-  //     color: $button-text-hover;
-  //     border-color: $button-border-color-hover;
-  //   }
-  // }
 }

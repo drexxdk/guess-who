@@ -9,6 +9,18 @@
     cursor: pointer;
   }
 
+  &.selected,
+  &.hover {
+    button {
+      background-color: transparent;
+      box-shadow: inset 0px 0px 0px 5px $success-color;
+      img {
+        z-index: -1;
+        position: relative;
+      }
+    }
+  }
+
   > img {
     visibility: hidden;
   }

@@ -45,23 +45,6 @@
           display: grid;
         }
 
-        &.selected > app-image.selected ::ng-deep,
-        &.hover > app-image.hover ::ng-deep {
-          position: relative;
-
-          &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            border: 0.8rem solid $success-color;
-            z-index: 1;
-            pointer-events: none;
-            border-radius: 2rem;
-          }
-        }
         &.selected > app-image:not(.selected) {
           opacity: 0.5;
         }
