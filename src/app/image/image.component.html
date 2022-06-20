@@ -15,7 +15,8 @@
   <app-icon svg="loading"></app-icon>
   <img [src]="src" [alt]="alt" />
   <app-headline
-    *ngIf="textShown && text"
+    *ngIf="text"
+    [attr.data-shown]="textShown"
     [text]="text"
     [align]="'center'"
   ></app-headline>

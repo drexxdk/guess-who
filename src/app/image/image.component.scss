@@ -88,6 +88,12 @@
       pointer-events: none;
       background: $image-overlay-background;
       color: $image-overlay-text;
+      transform: translateY(0%);
+      transition: transform 0.3s ease-in-out;
+
+      &[data-shown="false"] {
+        transform: translateY(100%);
+      }
     }
   }
 }

@@ -10,11 +10,13 @@ import { PwaService } from './pwa/pwa.service';
 import { InstallAppComponent } from './pwa/install-app/install-app.component';
 import { NewVersionComponent } from './pwa/new-version/new-version.component';
 import { IconModule } from './icon/icon.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, InstallAppComponent, NewVersionComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HeaderModule,
     IconModule,

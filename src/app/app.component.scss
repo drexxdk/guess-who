@@ -16,7 +16,8 @@ app-header {
 
 #content {
   height: calc(100vh - $header-height);
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   grid-area: content;
   // max-width: $container-width;
   width: 100%;
@@ -27,7 +28,11 @@ app-header {
   }
 
   ::ng-deep > *:not(router-outlet) {
-    height: 100%;
     padding: 2rem;
+    position: fixed;
+    top: $header-height;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }

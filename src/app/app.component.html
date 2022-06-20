@@ -1,6 +1,6 @@
 <app-header></app-header>
-<div id="content">
-  <router-outlet></router-outlet>
+<div id="content" [@routerAnimation]="getRouteAnimation(router)">
+  <router-outlet #router="outlet"></router-outlet>
 </div>
 <app-install-app></app-install-app>
 <app-new-version></app-new-version>
