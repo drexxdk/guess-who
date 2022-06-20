@@ -9,7 +9,7 @@ type size = 10 | 12 | 14 | 16 | 18 | 20 | 22 | 24 | 26 | 28;
 })
 export class IconComponent implements OnInit {
   @Input() svg!: string;
-  @Input() size?: size = 16;
+  @Input() size?: size;
 
   constructor() {}
 
