@@ -12,7 +12,7 @@
   &.selected,
   &.hover {
     button {
-      box-shadow: inset 0px 0px 0px 5px $success;
+      box-shadow: inset 0 0 0 0.5rem $success;
       img {
         z-index: -1;
         position: relative;
@@ -20,11 +20,11 @@
     }
   }
 
-  > img {
+  > svg {
     visibility: hidden;
   }
 
-  img {
+  > svg {
     width: 100%;
     height: 100%;
     display: block;
@@ -36,6 +36,33 @@
     right: 0;
     border-radius: 2rem;
     overflow: hidden;
+    aspect-ratio: 1;
+    box-shadow: inset 0 0 0 0.5rem $gray-300;
+    background-color: $gray-200;
+
+    app-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $gray-500;
+
+      width: 20%;
+      height: 20%;
+
+      ::ng-deep i {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      position: relative;
+    }
 
     @mixin active {
       background-color: $image-overlay-background-hover;

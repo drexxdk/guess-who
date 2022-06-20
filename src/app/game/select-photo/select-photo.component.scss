@@ -22,14 +22,14 @@
     display: grid;
     height: 100%;
 
-    > img {
+    > svg {
       display: none;
     }
 
     > div {
       display: grid;
 
-      > img {
+      > svg {
         display: none;
       }
 
@@ -63,7 +63,7 @@
       height: unset;
       position: relative;
 
-      > img {
+      > svg {
         display: block;
         visibility: hidden;
         width: 100%;

@@ -1,4 +1,10 @@
-<img src="assets/blank.svg" aria-hidden="true" />
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1 1"
+  fill="transparent"
+  width="1"
+  height="1"
+></svg>
 <button
   [disabled]="disabled"
   (click)="onClick()"
@@ -6,6 +12,7 @@
   (pointerleave)="onPointerLeave($event)"
   [attr.aria-label]="ariaLabel"
 >
+  <app-icon svg="loading" [size]="24"></app-icon>
   <img [src]="src" [alt]="alt" />
   <app-headline
     *ngIf="textShown && text"
