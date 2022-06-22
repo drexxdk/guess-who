@@ -11,6 +11,7 @@ import { InstallAppComponent } from './pwa/install-app/install-app.component';
 import { NewVersionComponent } from './pwa/new-version/new-version.component';
 import { IconModule } from './icon/icon.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [AppComponent, InstallAppComponent, NewVersionComponent],
@@ -26,6 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000',
     }),
+    StoreModule.forRoot({}, {}),
   ],
   providers: [PwaService],
   bootstrap: [AppComponent],
