@@ -94,6 +94,14 @@
       max-width: 50rem;
     }
 
+    @media (orientation: landscape) {
+      // it ignores the padding that should be at the bottom without this hack
+      margin-top: -2rem;
+      margin-bottom: -2rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
     &.selected button:not(.selected) {
       opacity: 0.5;
     }

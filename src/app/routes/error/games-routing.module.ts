@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { pageTypeEnum } from '@portal-app/page-type.enum';
-import { GamesComponent } from './games.component';
+import { pageTypeEnum } from '@portal-app/enums/page-type.enum';
+import { ErrorComponent } from './error.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: GamesComponent,
-    data: { pageType: pageTypeEnum.games },
+    component: ErrorComponent,
+    data: { pageType: pageTypeEnum.error },
   },
 ];
 
@@ -15,4 +15,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class GamesRoutingModule {}
+export class ErrorRoutingModule {}

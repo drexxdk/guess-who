@@ -5,29 +5,36 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('@portal-app/game/games/games.module').then(
+      import('@portal-app/routes/games/games.module').then(
         (module) => module.GamesModule
       ),
   },
   {
     path: 'name',
     loadChildren: () =>
-      import('@portal-app/game/select-name/select-name.module').then(
-        (module) => module.SelectNameModule
-      ),
+      import(
+        '@portal-app/routes/game/components/select-name/select-name.module'
+      ).then((module) => module.SelectNameModule),
   },
   {
     path: 'photo',
     loadChildren: () =>
-      import('@portal-app/game/select-photo/select-photo.module').then(
-        (module) => module.SelectPhotoModule
-      ),
+      import(
+        '@portal-app/routes/game/components/select-photo/select-photo.module'
+      ).then((module) => module.SelectPhotoModule),
   },
   {
     path: 'game/:id',
     loadChildren: () =>
-      import('@portal-app/game/game/game.module').then(
+      import('@portal-app/routes/game/game.module').then(
         (module) => module.GameModule
+      ),
+  },
+  {
+    path: '**',
+    loadChildren: () =>
+      import('@portal-app/routes/error/error.module').then(
+        (module) => module.ErrorModule
       ),
   },
 ];

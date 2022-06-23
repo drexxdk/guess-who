@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { InstallAppComponent } from './install-app/install-app.component';
 import { NewVersionComponent } from './new-version/new-version.component';
 import { OnlineStatusComponent } from './online-status/online-status.component';
-import { IconModule } from '@portal-app/icon/icon.module';
 import { PwaModalComponent } from './pwa-modal/pwa-modal.component';
+import { IconModule } from '../icon/icon.module';
 
 @NgModule({
   declarations: [

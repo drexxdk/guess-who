@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HostListener } from '@angular/core';
 import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
-import { routerAnimation } from './animations';
+import { routerAnimation } from './animations/animations';
 
 @Component({
   selector: 'app-root',
