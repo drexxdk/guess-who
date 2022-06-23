@@ -5,7 +5,7 @@ export const selectNameFeatureKey = 'SelectNameState';
 
 export const initialSelectNameState: SelectNameState = {
   answers: [],
-  current: 0,
+  currentQuestion: undefined,
   questions: [],
 };
 

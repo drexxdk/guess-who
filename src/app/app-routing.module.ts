@@ -5,8 +5,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('@portal-app/home/home.module').then(
-        (module) => module.HomeModule
+      import('@portal-app/game/games/games.module').then(
+        (module) => module.GamesModule
       ),
   },
   {
@@ -21,6 +21,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('@portal-app/game/select-photo/select-photo.module').then(
         (module) => module.SelectPhotoModule
+      ),
+  },
+  {
+    path: 'game/:id',
+    loadChildren: () =>
+      import('@portal-app/game/game/game.module').then(
+        (module) => module.GameModule
       ),
   },
 ];

@@ -1,0 +1,11 @@
+<ng-container
+  *ngIf="{
+    games: games$ | async
+  } as sub"
+>
+  <ul>
+    <li *ngFor="let game of sub.games">
+      <button (click)="onClickGame(game.id)">{{ game.title }}</button>
+    </li>
+  </ul>
+</ng-container>

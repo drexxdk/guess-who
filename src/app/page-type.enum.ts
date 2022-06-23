@@ -1,5 +1,6 @@
 export enum pageTypeEnum {
-  home,
+  games,
+  game,
   selectName,
   selectPhoto,
 }

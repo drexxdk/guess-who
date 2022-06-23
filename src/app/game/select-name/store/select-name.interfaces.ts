@@ -1,18 +1,18 @@
-import { answer } from '@portal-app/game/game.interfaces';
+import { Answer } from '@portal-app/game/game.interfaces';
 
 export interface SelectNameState {
-  questions: question[];
-  answers: answer[];
-  current: number;
+  questions: Question[];
+  answers: Answer[];
+  currentQuestion?: Question;
 }
 
-interface question {
+export interface Question {
   id: number;
   title: string;
-  options: option[];
+  options: Option[];
 }
 
-interface option {
+export interface Option {
   id: number;
   title: string;
 }

@@ -1,6 +1,6 @@
 @import "~src/scss/scss-variables.scss";
 
-@mixin pwa-modal {
+:host {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -52,9 +52,5 @@
         }
       }
     }
-  }
-
-  .ios-menu {
-    width: 14px;
   }
 }

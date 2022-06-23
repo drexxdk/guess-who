@@ -1,4 +1,4 @@
-export interface answer {
+export interface Answer {
   questionindex: number;
   answerIndex?: number;
   isCorrect: boolean;

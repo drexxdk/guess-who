@@ -3,5 +3,7 @@
     isOnline: isOnline$ | async
   } as sub"
 >
-  <label *ngIf="!sub.isOnline">Offline</label>
+  <app-pwa-modal *ngIf="!sub.isOnline">
+    <label>Offline</label>
+  </app-pwa-modal>
 </ng-container>

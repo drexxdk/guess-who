@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 import { IconModule } from '@portal-app/icon/icon.module';
 
 @NgModule({
-  declarations: [HeaderComponent, OnlineStatusComponent],
+  declarations: [HeaderComponent],
   imports: [CommonModule, NavbarModule, RouterModule, IconModule],
   exports: [HeaderComponent],
 })
