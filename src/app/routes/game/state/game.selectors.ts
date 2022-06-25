@@ -9,7 +9,7 @@ export const getGame = createSelector(
   (state: GameState) => state.game
 );
 
-export const isLoading = createSelector(
+export const getStatus = createSelector(
   selectGameState,
-  (state: GameState) => state.status === 'loading'
+  (state: GameState) => state.status
 );

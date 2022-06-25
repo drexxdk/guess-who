@@ -12,8 +12,7 @@ import { HeaderModule } from './modules/header/header.module';
 import { IconModule } from './modules/icon/icon.module';
 import { PwaModule } from './modules/pwa/pwa.module';
 import { PwaService } from './modules/pwa/pwa.service';
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+// import { AngularFireModule } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [AppComponent],
@@ -37,8 +36,8 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
       maxAge: 100,
       logOnly: environment.production,
     }),
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
+    // AngularFireModule.initializeApp(environment.firebase),
+    // AngularFireAuthModule,
     // AngularFirestoreModule,
     // AngularFireStorageModule,
     // AngularFireDatabaseModule,

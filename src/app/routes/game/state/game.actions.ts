@@ -19,3 +19,5 @@ export const fetchGameFailure = createAction(
   name + 'Fetch Game Failure',
   props<{ error: Error }>()
 );
+
+export const closeGame = createAction(name + 'Close Game');

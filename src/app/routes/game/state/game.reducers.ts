@@ -23,5 +23,10 @@ export const gameReducer = createReducer(
   on(GameActions.fetchGameFailure, (state, action) => ({
     ...state,
     status: 'error',
+  })),
+  on(GameActions.closeGame, (state) => ({
+    ...state,
+    status: 'pending',
+    game: undefined,
   }))
 );

@@ -20,7 +20,7 @@ export class GameEffects {
   fetchGame$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(GameActions.fetchGame),
-      exhaustMap((action) => {
+      switchMap((action) => {
         this.gameStore.dispatch(GameActions.fetchGameLoading());
         return this.gameApiService.fetchGame(action.id).pipe(
           switchMap((game) => {
@@ -33,20 +33,6 @@ export class GameEffects {
       })
     );
   });
-
-  // fetchGameSuccess$ = createEffect(
-  //   () => {
-  //     return this.actions$.pipe(
-  //       ofType(GameActions.fetchGameSuccess),
-  //       tap((action) => {
-  //         this.router.navigate(['/game/' + action.game.id], {
-  //           skipLocationChange: true,
-  //         });
-  //       })
-  //     );
-  //   },
-  //   { dispatch: false }
-  // );
 
   fetchGameFailure$ = createEffect(
     () => {

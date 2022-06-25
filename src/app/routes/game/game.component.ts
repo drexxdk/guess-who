@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { GamesState } from '@portal-app/routes/games/state/games.interfaces';
@@ -11,9 +11,9 @@ import * as GameSelectors from './state/game.selectors';
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss'],
 })
-export class GameComponent implements OnInit {
+export class GameComponent implements OnInit, OnDestroy {
   public game$ = this.gameStore.select(GameSelectors.getGame);
-  public isLoading$ = this.gameStore.select(GameSelectors.isLoading);
+  public status$ = this.gameStore.select(GameSelectors.getStatus);
 
   constructor(
     private gameStore: Store<GamesState>,
@@ -22,6 +22,10 @@ export class GameComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadGame();
+  }
+
+  ngOnDestroy(): void {
+    this.gameStore.dispatch(GameActions.closeGame());
   }
 
   private loadGame() {

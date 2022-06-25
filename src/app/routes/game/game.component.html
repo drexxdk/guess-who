@@ -1,13 +1,13 @@
 <ng-container
   *ngIf="{
     game: game$ | async,
-    isLoading: isLoading$ | async
+    status: status$ | async
   } as sub"
 >
-  <ng-container *ngIf="sub.isLoading">
+  <ng-container *ngIf="sub.status === 'loading'">
     <app-loading></app-loading>
   </ng-container>
-  <ng-container *ngIf="sub.game">
+  <ng-container *ngIf="sub.game && sub.status === 'success'">
     <app-select-name *ngIf="sub.game.type === 'select-name'"></app-select-name>
     <app-select-photo
       *ngIf="sub.game.type === 'select-photo'"
