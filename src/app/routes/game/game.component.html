@@ -1,1 +1,16 @@
-<p>game works!</p>
+<ng-container
+  *ngIf="{
+    game: game$ | async,
+    isLoading: isLoading$ | async
+  } as sub"
+>
+  <ng-container *ngIf="sub.isLoading">
+    <app-loading></app-loading>
+  </ng-container>
+  <ng-container *ngIf="sub.game">
+    <app-select-name *ngIf="sub.game.type === 'select-name'"></app-select-name>
+    <app-select-photo
+      *ngIf="sub.game.type === 'select-photo'"
+    ></app-select-photo>
+  </ng-container>
+</ng-container>

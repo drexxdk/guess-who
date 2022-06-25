@@ -10,20 +10,6 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'name',
-    loadChildren: () =>
-      import(
-        '@portal-app/routes/game/components/select-name/select-name.module'
-      ).then((module) => module.SelectNameModule),
-  },
-  {
-    path: 'photo',
-    loadChildren: () =>
-      import(
-        '@portal-app/routes/game/components/select-photo/select-photo.module'
-      ).then((module) => module.SelectPhotoModule),
-  },
-  {
     path: 'game/:id',
     loadChildren: () =>
       import('@portal-app/routes/game/game.module').then(

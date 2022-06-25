@@ -3,9 +3,13 @@
 :host {
   overflow: auto;
   display: flex;
-
-  display: flex;
   margin: 0 auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
 
   @media (orientation: portrait) {
     flex-direction: column;
@@ -86,7 +90,6 @@
   ul {
     display: grid;
     gap: 1rem;
-    list-style-type: none;
     // grid-template-columns: repeat(auto-fit, minmax(min(35rem, 100%), 1fr));
 
     @media (orientation: portrait) {

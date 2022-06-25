@@ -1,0 +1,11 @@
+@import "~src/scss/scss-variables.scss";
+
+ul {
+  display: grid;
+  gap: 1rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  background-color: $gray-200;
+}

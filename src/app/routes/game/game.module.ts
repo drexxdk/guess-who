@@ -2,9 +2,24 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GameComponent } from './game.component';
 import { GameRoutingModule } from './games-routing.module';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
+import { gameFeatureKey, gameReducer } from './state/game.reducers';
+import { GameEffects } from './state/game.effects';
+import { SelectNameModule } from '@portal-app/modules/select-name/select-name.module';
+import { SelectPhotoModule } from '@portal-app/modules/select-photo/select-photo.module';
+import { LoadingModule } from '@portal-app/modules/loading/loading.module';
 
 @NgModule({
   declarations: [GameComponent],
-  imports: [CommonModule, GameRoutingModule],
+  imports: [
+    CommonModule,
+    GameRoutingModule,
+    StoreModule.forFeature(gameFeatureKey, gameReducer),
+    EffectsModule.forFeature([GameEffects]),
+    SelectNameModule,
+    SelectPhotoModule,
+    LoadingModule,
+  ],
 })
 export class GameModule {}

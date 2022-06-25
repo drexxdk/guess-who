@@ -10,7 +10,7 @@
   display: grid;
   justify-content: right;
 
-  > div {
+  ::ng-deep > div {
     border: 0.1rem solid $gray-400;
     background-color: $gray-200;
     border-radius: 1rem;

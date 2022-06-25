@@ -1,11 +1,17 @@
 <ng-container
   *ngIf="{
-    games: games$ | async
+    games: games$ | async,
+    isLoading: isLoading$ | async
   } as sub"
 >
-  <ul>
-    <li *ngFor="let game of sub.games">
-      <button (click)="onClickGame(game.id)">{{ game.title }}</button>
-    </li>
-  </ul>
+  <ng-container *ngIf="sub.isLoading">
+    <label>Loading ...</label>
+  </ng-container>
+  <ng-container *ngIf="sub.games">
+    <ul>
+      <li *ngFor="let game of sub.games">
+        <button (click)="onClickGame(game.id)">{{ game.title }}</button>
+      </li>
+    </ul></ng-container
+  >
 </ng-container>
