@@ -2,25 +2,34 @@
   <div>
     <app-image
       src="assets/people/1.webp"
-      text="Who is this?"
+      [text]="
+        result ? (result === selected ? 'Correct' : 'Wrong') : 'Who is this?'
+      "
       ariaLabel="Toggle title shown"
       alt="Person face"
+      [validation]="
+        result ? (result === selected ? 'valid' : 'invalid') : undefined
+      "
+      [disabled]="result ? true : false"
     ></app-image>
   </div>
 </div>
 <div id="options">
   <ul [class.hover]="hover && !selected" [class.selected]="selected">
-    <li *ngFor="let name of names">
+    <li *ngFor="let person of persons">
       <button
-        [class.hover]="hover === name"
-        [class.selected]="selected === name"
+        [attr.data-state]="
+          result ? (result === person.id ? 'valid' : 'invalid') : 'initial'
+        "
+        [class.hover]="hover === person.id"
+        [class.selected]="selected === person.id"
         [disabled]="selected"
         [disabled]="selected ? true : false"
-        (pointerenter)="onPointerEnter(name, $event)"
+        (pointerenter)="onPointerEnter(person.id, $event)"
         (pointerleave)="onPointerLeave($event)"
-        (click)="onClick(name)"
+        (click)="onClick(person.id)"
       >
-        {{ name }}
+        {{ person.name }}
       </button>
     </li>
   </ul>

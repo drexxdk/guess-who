@@ -9,12 +9,11 @@ import {
 type align = 'left' | 'center' | 'right';
 
 @Component({
-  selector: 'app-headline[text]',
+  selector: 'app-headline',
   templateUrl: './headline.component.html',
   styleUrls: ['./headline.component.scss'],
 })
 export class HeadlineComponent implements OnInit {
-  @Input() text!: string;
   @Input() align: align = 'left';
 
   constructor(private elementRef: ElementRef) {}

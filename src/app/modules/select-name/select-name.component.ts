@@ -1,36 +1,40 @@
 import { Component, OnInit } from '@angular/core';
 
+interface person {
+  id: number;
+  name: string;
+}
+
 @Component({
   selector: 'app-select-name',
   templateUrl: './select-name.component.html',
   styleUrls: ['./select-name.component.scss'],
 })
 export class SelectNameComponent implements OnInit {
-  names: string[] = [
-    'Simon Jensen',
-    'Jens Frederiksen',
-    'Hans Mortensen',
-    'Mikkel Hansen',
+  persons: person[] = [
+    { id: 1, name: 'Simon Jensen' },
+    { id: 2, name: 'Jens Frederiksen' },
+    { id: 3, name: 'Hans Mortensen' },
+    { id: 4, name: 'Mikkel Hansen' },
   ];
-  hover: string | undefined;
-  selected: string | undefined;
+  hover: number | undefined;
+  selected: number | undefined;
+  result: number | undefined;
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  onSelected(selected: string) {
-    this.selected = selected;
-  }
-
-  onClick(name: string) {
+  onClick(id: number) {
     if (!this.selected) {
-      this.selected = name;
+      this.selected = id;
     }
+
+    this.result = 3;
   }
 
-  onPointerEnter(name: string, $event: PointerEvent) {
-    this.hover = name;
+  onPointerEnter(id: number, $event: PointerEvent) {
+    this.hover = id;
   }
 
   onPointerLeave($event: PointerEvent) {

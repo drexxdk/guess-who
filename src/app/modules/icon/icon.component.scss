@@ -6,22 +6,22 @@
   align-items: center;
   flex-shrink: 0;
 
-  i {
-    width: 100%;
-    height: 100%;
-    @for $index from 1 through 10 {
-      $size: ($index * 2) + 8;
-
-      &[data-size="#{$size}"] {
-        width: rem(#{$size}px);
-        height: rem(#{$size}px);
-      }
-    }
-  }
-
   ::ng-deep svg {
     width: 100%;
     height: 100%;
     display: block;
+  }
+}
+
+i {
+  width: 100%;
+  height: 100%;
+  @for $index from 1 through 10 {
+    $size: ($index * 2) + 8;
+
+    &[data-size="#{$size}"] {
+      width: rem(#{$size}px);
+      height: rem(#{$size}px);
+    }
   }
 }

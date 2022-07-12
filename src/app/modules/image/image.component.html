@@ -11,13 +11,24 @@
   (pointerenter)="onPointerEnter($event)"
   (pointerleave)="onPointerLeave($event)"
   [attr.aria-label]="ariaLabel"
+  [attr.data-validation]="validation"
 >
-  <app-icon svg="loading"></app-icon>
+  <div class="loading">
+    <app-icon svg="loading"></app-icon>
+  </div>
   <img [src]="src" [alt]="alt" />
+  <div *ngIf="validation" class="validation"></div>
   <app-headline
     *ngIf="text"
-    [attr.data-shown]="textShown"
-    [text]="text"
+    [attr.data-shown]="textShown || validation !== undefined"
+    [style.transition]="validation ? 'unset' : null"
+    [attr.data-validation]="validation"
     [align]="'center'"
-  ></app-headline>
+  >
+    <span>{{ text }}</span>
+    <app-icon
+      *ngIf="validation"
+      [svg]="validation === 'valid' ? 'check' : 'x-mark'"
+    ></app-icon>
+  </app-headline>
 </button>

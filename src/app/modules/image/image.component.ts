@@ -1,19 +1,22 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
+type validation = 'valid' | 'invalid';
 @Component({
   selector: 'app-image[src][alt][ariaLabel]',
   templateUrl: './image.component.html',
   styleUrls: ['./image.component.scss'],
 })
 export class ImageComponent implements OnInit {
+  @Input() id?: number;
   @Input() src!: string;
   @Input() alt!: string;
   @Input() ariaLabel!: string;
   @Input() text?: string;
   @Input() disabled: boolean = false;
+  @Input() validation?: validation;
 
-  @Output() selected = new EventEmitter<string>();
-  @Output() hover = new EventEmitter<string | undefined>();
+  @Output() selected = new EventEmitter<number>();
+  @Output() hover = new EventEmitter<number | undefined>();
 
   textShown: boolean = true;
   constructor() {}
@@ -22,11 +25,15 @@ export class ImageComponent implements OnInit {
 
   onClick() {
     this.textShown = !this.textShown;
-    this.selected.emit(this.src);
+    if (this.id) {
+      this.selected.emit(this.id);
+    }
   }
 
   onPointerEnter($event: PointerEvent) {
-    this.hover.emit(this.src);
+    if (this.id) {
+      this.hover.emit(this.id);
+    }
   }
 
   onPointerLeave($event: PointerEvent) {

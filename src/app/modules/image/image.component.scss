@@ -13,16 +13,29 @@
   &.hover {
     button {
       background-color: transparent;
-      box-shadow: inset 0 0 0 0.5rem $success;
 
       app-icon {
-        display: none;
+        // display: none;
+        z-index: -1;
       }
 
       img {
         z-index: -1;
         position: relative;
       }
+    }
+  }
+
+  &.hover button {
+    box-shadow: inset 0 0 0 0.5rem $gray-500;
+  }
+
+  &.selected {
+    button[data-validation="valid"] {
+      box-shadow: inset 0 0 0 0.5rem $success;
+    }
+    button[data-validation="invalid"] {
+      box-shadow: inset 0 0 0 0.5rem $danger;
     }
   }
 
@@ -46,14 +59,44 @@
     box-shadow: inset 0 0 0 0.5rem $gray-300;
     background-color: $gray-200;
 
-    app-icon {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    .loading {
       color: $gray-500;
-      width: 20%;
-      height: 20%;
+    }
+
+    &[data-validation="valid"] .validation {
+      color: $success;
+    }
+
+    &[data-validation="invalid"] .validation {
+      color: $danger;
+    }
+
+    .loading,
+    .validation {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: grid;
+      place-items: center;
+      pointer-events: none;
+    }
+
+    .loading app-icon {
+      width: 25%;
+      height: 25%;
+    }
+
+    .validation app-icon {
+      width: 25%;
+      height: 25%;
+      border-radius: 50%;
+      background-color: $gray-200;
+
+      ::ng-deep i {
+        padding: 25%;
+      }
     }
 
     img {
@@ -93,6 +136,15 @@
 
       &[data-shown="false"] {
         transform: translateY(100%);
+      }
+      &[data-validation="valid"] {
+        background-color: $success;
+        color: $success-accent;
+      }
+
+      &[data-validation="invalid"] {
+        background-color: $danger;
+        color: $danger-accent;
       }
     }
   }
