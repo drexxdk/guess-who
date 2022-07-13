@@ -1,6 +1,5 @@
 <div id="question">
   <app-headline [align]="'center'"><span>Who is Simon?</span></app-headline>
-  <!-- <h2>Who is Simon?</h2> -->
 </div>
 <div id="options">
   <div>
@@ -19,32 +18,17 @@
         width="1"
         height="1"
       ></svg>
-      <div
-        id="photos"
-        [class.hover]="hover && !selected"
-        [class.selected]="selected"
-      >
+      <div id="photos" [class.selected]="selected">
         <app-image
           *ngFor="let photo of photos; let i = index"
-          [class.hover]="hover === photo.id && !selected"
-          [class.selected]="selected === photo.id"
-          [class.disabled]="selected"
           [disabled]="selected ? true : false"
-          [id]="photo.id"
+          [selected]="selected === photo.id"
           [src]="photo.url"
-          ariaLabel="Select person face {{ i + 1 }}"
-          alt="Person face {{ i }}"
-          (selected)="onSelected($event)"
-          (hover)="onHover($event)"
+          [ariaLabel]="'Select person face {{ i + 1 }}'"
+          [alt]="'Person face {{ i }}'"
+          (clickEvent)="onClick(photo.id)"
           [validation]="
             result ? (result === photo.id ? 'valid' : 'invalid') : undefined
-          "
-          [text]="
-            selected === photo.id
-              ? result === selected
-                ? 'Correct'
-                : 'Wrong'
-              : undefined
           "
         ></app-image>
       </div>

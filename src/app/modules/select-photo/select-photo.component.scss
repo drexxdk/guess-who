@@ -51,7 +51,7 @@
           display: grid;
         }
 
-        &.selected > app-image:not(.selected) {
+        &.selected > app-image ::ng-deep button:not(.selected) {
           opacity: 0.5;
         }
       }

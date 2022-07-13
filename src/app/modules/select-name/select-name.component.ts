@@ -32,12 +32,4 @@ export class SelectNameComponent implements OnInit {
 
     this.result = 3;
   }
-
-  onPointerEnter(id: number, $event: PointerEvent) {
-    this.hover = id;
-  }
-
-  onPointerLeave($event: PointerEvent) {
-    this.hover = undefined;
-  }
 }

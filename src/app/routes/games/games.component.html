@@ -10,7 +10,9 @@
   <ng-container *ngIf="sub.games">
     <ul>
       <li *ngFor="let game of sub.games">
-        <button (click)="onClickGame(game.id)">{{ game.title }}</button>
+        <app-button (clickEvent)="onClickGame(game.id)">{{
+          game.title
+        }}</app-button>
       </li>
     </ul></ng-container
   >

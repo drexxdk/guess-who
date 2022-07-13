@@ -8,24 +8,21 @@
 <button
   [disabled]="disabled"
   (click)="onClick()"
-  (pointerenter)="onPointerEnter($event)"
-  (pointerleave)="onPointerLeave($event)"
   [attr.aria-label]="ariaLabel"
   [attr.data-validation]="validation"
+  [class.selected]="selected"
 >
   <div class="loading">
     <app-icon svg="loading"></app-icon>
   </div>
   <img [src]="src" [alt]="alt" />
-  <div *ngIf="validation" class="validation"></div>
   <app-headline
-    *ngIf="text"
+    *ngIf="text || (selected && validation !== undefined)"
     [attr.data-shown]="textShown || validation !== undefined"
     [style.transition]="validation ? 'unset' : null"
-    [attr.data-validation]="validation"
     [align]="'center'"
   >
-    <span>{{ text }}</span>
+    <span *ngIf="text">{{ text }}</span>
     <app-icon
       *ngIf="validation"
       [svg]="validation === 'valid' ? 'check' : 'x-mark'"

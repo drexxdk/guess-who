@@ -1,12 +1,11 @@
 <div id="image">
   <div>
     <app-image
-      src="assets/people/1.webp"
-      [text]="
-        result ? (result === selected ? 'Correct' : 'Wrong') : 'Who is this?'
-      "
-      ariaLabel="Toggle title shown"
-      alt="Person face"
+      [src]="'assets/people/1.webp'"
+      [text]="result ? undefined : 'Who is this?'"
+      [ariaLabel]="'Toggle title shown'"
+      [alt]="'Person face'"
+      [selected]="result !== undefined"
       [validation]="
         result ? (result === selected ? 'valid' : 'invalid') : undefined
       "
@@ -15,22 +14,18 @@
   </div>
 </div>
 <div id="options">
-  <ul [class.hover]="hover && !selected" [class.selected]="selected">
+  <ul [class.selected]="selected">
     <li *ngFor="let person of persons">
-      <button
-        [attr.data-state]="
-          result ? (result === person.id ? 'valid' : 'invalid') : 'initial'
-        "
-        [class.hover]="hover === person.id"
-        [class.selected]="selected === person.id"
-        [disabled]="selected"
+      <app-button
+        [selected]="selected === person.id"
         [disabled]="selected ? true : false"
-        (pointerenter)="onPointerEnter(person.id, $event)"
-        (pointerleave)="onPointerLeave($event)"
-        (click)="onClick(person.id)"
+        [validation]="
+          result ? (result === person.id ? 'valid' : 'invalid') : undefined
+        "
+        (clickEvent)="onClick(person.id)"
       >
         {{ person.name }}
-      </button>
+      </app-button>
     </li>
   </ul>
 </div>
