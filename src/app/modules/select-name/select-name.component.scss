@@ -1,4 +1,4 @@
-@import "~src/scss/scss-variables.scss";
+@import "app";
 
 :host {
   overflow: auto;
@@ -14,6 +14,13 @@
   @media (orientation: portrait) {
     flex-direction: column;
     flex-grow: 1;
+
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      flex-grow: 1;
+    }
   }
 
   @media (orientation: landscape) {
@@ -76,8 +83,10 @@
       max-width: $image-max-size;
     }
 
-    ::ng-deep app-image button:hover:before {
-      display: none;
+    @media (hover: hover) {
+      ::ng-deep app-image button:hover:before {
+        display: none;
+      }
     }
   }
 }
@@ -88,17 +97,17 @@
 
   @media (orientation: landscape) {
     display: grid;
-    max-width: 50rem;
+    max-width: $image-max-size;
   }
 
   ul {
     display: grid;
-    gap: 1rem;
+    gap: 10px;
     // grid-template-columns: repeat(auto-fit, minmax(min(35rem, 100%), 1fr));
 
     @media (orientation: portrait) {
       margin: 0 auto;
-      max-width: 50rem;
+      max-width: $image-max-size;
     }
 
     @media (orientation: landscape) {

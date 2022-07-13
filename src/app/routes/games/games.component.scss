@@ -1,7 +1,7 @@
-@import "~src/scss/scss-variables.scss";
+@import "app";
 
 ul {
   display: grid;
-  gap: 1rem;
-  max-width: 50rem;
+  gap: 10px;
+  max-width: 500px;
 }

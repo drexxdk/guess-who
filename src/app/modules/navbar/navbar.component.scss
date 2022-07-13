@@ -1,4 +1,4 @@
-@import "~src/scss/scss-variables.scss";
+@import "app";
 
 ul {
   display: flex;
@@ -6,9 +6,9 @@ ul {
 
 a {
   display: block;
-  font-size: 1.4rem;
+  font-size: 14px;
   line-height: $header-height;
-  padding: 0 2rem;
+  padding: 0 20px;
   color: $body-color;
 
   @mixin active {

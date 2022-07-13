@@ -17,6 +17,7 @@
   <ul [class.selected]="selected">
     <li *ngFor="let person of persons">
       <app-button
+        [animation]="selected === person.id"
         [selected]="selected === person.id"
         [disabled]="selected ? true : false"
         [validation]="

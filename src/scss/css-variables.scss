@@ -1,5 +1,3 @@
-@use "scss-variables.scss";
-
 :root {
   --white: #fff;
   --gray-100: #f8f9fa;
@@ -44,6 +42,9 @@
 
   --loading-background: rgba(255, 255, 255, 0.3);
   --loading-text-color: var(--gray-900);
+
+  --shake-1: 5px;
+  --shake-2: -5px;
 
   @media (prefers-color-scheme: dark) {
     --white: #000;

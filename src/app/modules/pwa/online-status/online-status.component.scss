@@ -1,8 +1,9 @@
-@import "~src/scss/scss-variables.scss";
+@import "app";
+
 :host {
   display: block;
   background-color: $danger;
-  padding: 0 1rem;
+  padding: 0 10px;
   line-height: $header-height;
   flex-shrink: 0;
 }

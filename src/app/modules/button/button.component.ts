@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { validation } from '@portal-app/modules/image/image.component';
+import { validation } from '@portal-app/types/validation.type';
 
 @Component({
   selector: 'app-button',
@@ -10,6 +10,7 @@ export class ButtonComponent implements OnInit {
   @Input() validation?: validation;
   @Input() selected: boolean = false;
   @Input() disabled: boolean = false;
+  @Input() animation: boolean = false;
 
   @Output() clickEvent = new EventEmitter<void>();
   constructor() {}

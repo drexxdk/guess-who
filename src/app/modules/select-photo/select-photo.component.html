@@ -21,6 +21,7 @@
       <div id="photos" [class.selected]="selected">
         <app-image
           *ngFor="let photo of photos; let i = index"
+          [animation]="selected === photo.id"
           [disabled]="selected ? true : false"
           [selected]="selected === photo.id"
           [src]="photo.url"

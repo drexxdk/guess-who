@@ -1,4 +1,5 @@
-import { Game, Status } from '@portal-app/routes/games/state/games.interfaces';
+import { Game } from '@portal-app/routes/games/state/games.interfaces';
+import { Status } from '@portal-app/types/status.type';
 
 export interface GameState {
   status: Status;

@@ -1,0 +1,20 @@
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--pulse-color);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(var(--shake-1), 0);
+  }
+  50% {
+    transform: translate(var(--shake-2), 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

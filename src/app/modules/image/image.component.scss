@@ -1,4 +1,4 @@
-@import "~src/scss/scss-variables.scss";
+@import "app";
 
 :host {
   position: relative;
@@ -6,17 +6,14 @@
   align-items: center;
 
   > svg {
-    visibility: hidden;
-  }
-
-  > svg {
     width: 100%;
     height: 100%;
     display: block;
+    visibility: hidden;
   }
 
   button,
-  button:before {
+  button > div:before {
     position: absolute;
     left: 0;
     right: 0;
@@ -24,46 +21,76 @@
   }
 
   button {
-    overflow: hidden;
     aspect-ratio: 1;
-    background-color: $gray-200;
-    font-size: clamp(1.8rem, 6vh, 3.5rem);
 
-    &:before {
-      content: "";
-      top: 0;
-      bottom: 0;
-      pointer-events: none;
-      border: 0.5rem solid $gray-300;
+    > div {
+      position: relative;
+      border-radius: 5%;
+      overflow: hidden;
+      background-color: $gray-200;
+
+      &:before {
+        content: "";
+        top: 0;
+        bottom: 0;
+        pointer-events: none;
+        border: 5px solid $gray-300;
+      }
     }
 
-    &:hover:before {
-      border-color: $gray-500;
-      z-index: 1;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      pointer-events: none;
+      box-shadow: 0 0 0 2em transparent;
+      border-radius: 5%;
+    }
+
+    @media (hover: hover) {
+      &.border-on-hover:hover > div:before {
+        border-color: $gray-500;
+        z-index: 1;
+      }
+    }
+
+    &[data-validation="valid"] {
+      --color: #{$success};
+      --accent: #{$success-accent};
+      --pulse-color: #{$success};
+    }
+
+    &[data-validation="invalid"] {
+      --color: #{$danger};
+      --accent: #{$danger-accent};
+      --pulse-color: #{$danger};
     }
 
     &.selected {
-      &[data-validation="valid"] {
-        &:before {
-          border-color: $success;
-          z-index: 1;
-        }
-
-        app-headline {
-          background-color: $success;
-          color: $success-accent;
-        }
+      > div:before {
+        border-color: var(--color);
+        z-index: 1;
       }
-      &[data-validation="invalid"] {
-        &:before {
-          border-color: $danger;
-          z-index: 1;
-        }
 
-        app-headline {
-          background-color: $danger;
-          color: $danger-accent;
-        }
+      app-headline {
+        background-color: var(--color);
+        color: var(--accent);
+      }
+    }
+
+    &.animation {
+      &[data-validation="valid"]:after {
+        animation: $animation-validation-valid;
+      }
+
+      &[data-validation="invalid"] {
+        animation: $animation-validation-invalid;
+      }
+      &:after {
+        z-index: 3;
       }
     }
 

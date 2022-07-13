@@ -11,21 +11,25 @@
   [attr.aria-label]="ariaLabel"
   [attr.data-validation]="validation"
   [class.selected]="selected"
+  [class.animation]="animation"
+  [class.border-on-hover]="!text"
 >
-  <div class="loading">
-    <app-icon svg="loading"></app-icon>
+  <div>
+    <div class="loading">
+      <app-icon svg="loading"></app-icon>
+    </div>
+    <img [src]="src" [alt]="alt" />
+    <app-headline
+      *ngIf="text || (selected && validation !== undefined)"
+      [attr.data-shown]="textShown || validation !== undefined"
+      [style.transition]="validation ? 'unset' : null"
+      [align]="'center'"
+    >
+      <span *ngIf="text">{{ text }}</span>
+      <app-icon
+        *ngIf="validation"
+        [svg]="validation === 'valid' ? 'check' : 'x-mark'"
+      ></app-icon>
+    </app-headline>
   </div>
-  <img [src]="src" [alt]="alt" />
-  <app-headline
-    *ngIf="text || (selected && validation !== undefined)"
-    [attr.data-shown]="textShown || validation !== undefined"
-    [style.transition]="validation ? 'unset' : null"
-    [align]="'center'"
-  >
-    <span *ngIf="text">{{ text }}</span>
-    <app-icon
-      *ngIf="validation"
-      [svg]="validation === 'valid' ? 'check' : 'x-mark'"
-    ></app-icon>
-  </app-headline>
 </button>

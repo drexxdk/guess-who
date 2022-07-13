@@ -1,7 +1,9 @@
-type GameType = 'select-name' | 'select-photo';
-type GameDifficulty = 'easy' | 'medium' | 'hard';
-export type Status = 'pending' | 'loading' | 'success' | 'error';
-type GameStatus = 'not-started' | 'started' | 'finished';
+import {
+  GameType,
+  GameStatus,
+  GameDifficulty,
+} from '@portal-app/types/game.type';
+import { Status } from '@portal-app/types/status.type';
 
 export interface GamesState {
   status: Status;

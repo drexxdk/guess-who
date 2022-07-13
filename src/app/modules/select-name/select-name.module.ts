@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SelectNameComponent } from './select-name.component';
 import { ImageModule } from '@portal-app/modules/image/image.module';
 import { IconModule } from '../icon/icon.module';
-import { ButtonModule } from '@portal-app/button/button.module';
+import { ButtonModule } from '@portal-app/modules/button/button.module';
 
 @NgModule({
   declarations: [SelectNameComponent],

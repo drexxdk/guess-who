@@ -1,27 +1,30 @@
-@import "~src/scss/scss-variables.scss";
+@import "app";
 
 :host {
   display: flex;
-  font-size: 1.8rem;
+  font-size: 18px;
   font-weight: bold;
   gap: 0.5em;
 
   &[data-align="left"] {
     justify-content: flex-start;
+    text-align: left;
   }
   &[data-align="center"] {
     justify-content: center;
+    text-align: center;
   }
   &[data-align="right"] {
     justify-content: flex-end;
+    text-align: right;
   }
 
   @media (orientation: portrait) {
-    font-size: clamp(1.8rem, 6vw, 3.5rem);
+    font-size: clamp(18px, 7.3vw, 35px);
   }
 
   @media (orientation: landscape) {
-    font-size: clamp(1.8rem, 6vh, 3.5rem);
+    font-size: clamp(18px, 7.3vh, 35px);
   }
 
   ::ng-deep app-icon i {

@@ -6,8 +6,8 @@ import {
   OnInit,
   Output,
 } from '@angular/core';
+import { validation } from '@portal-app/types/validation.type';
 
-export type validation = 'valid' | 'invalid';
 @Component({
   selector: 'app-image[src][alt][ariaLabel]',
   templateUrl: './image.component.html',
@@ -20,8 +20,8 @@ export class ImageComponent implements OnInit {
   @Input() text?: string;
   @Input() selected: boolean = false;
   @Input() disabled: boolean = false;
-  @Input() hover: boolean = false;
   @Input() validation?: validation;
+  @Input() animation: boolean = false;
 
   @Output() clickEvent = new EventEmitter<void>();
 

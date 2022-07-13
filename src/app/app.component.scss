@@ -1,7 +1,7 @@
-@import "~src/scss/scss-variables.scss";
+@import "app";
 
 :host {
-  min-height: 100vh;
+  min-height: 100%;
   display: grid;
   grid-template-areas:
     "header"
@@ -28,7 +28,7 @@ app-header {
   }
 
   ::ng-deep > *:not(router-outlet) {
-    padding: 2rem;
+    padding: 20px;
     position: fixed;
     top: $header-height;
     bottom: 0;
