@@ -6,8 +6,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { gameFeatureKey, gameReducer } from './state/game.reducers';
 import { GameEffects } from './state/game.effects';
-import { SelectNameModule } from '@portal-app/modules/select-name/select-name.module';
-import { SelectPhotoModule } from '@portal-app/modules/select-photo/select-photo.module';
+import { GameSelectNameModule } from '@portal-app/modules/game-select-name/game-select-name.module';
+import { GameSelectPhotoModule } from '@portal-app/modules/game-select-photo/game-select-photo.module';
 import { LoadingModule } from '@portal-app/modules/loading/loading.module';
 
 @NgModule({
@@ -17,8 +17,8 @@ import { LoadingModule } from '@portal-app/modules/loading/loading.module';
     GameRoutingModule,
     StoreModule.forFeature(gameFeatureKey, gameReducer),
     EffectsModule.forFeature([GameEffects]),
-    SelectNameModule,
-    SelectPhotoModule,
+    GameSelectNameModule,
+    GameSelectPhotoModule,
     LoadingModule,
   ],
 })

@@ -5,11 +5,11 @@ import {
 } from '@portal-app/routes/game/state/game.interfaces';
 
 @Component({
-  selector: 'app-select-name[question]',
-  templateUrl: './select-name.component.html',
-  styleUrls: ['./select-name.component.scss'],
+  selector: 'app-game-select-name[question]',
+  templateUrl: './game-select-name.component.html',
+  styleUrls: ['./game-select-name.component.scss'],
 })
-export class SelectNameComponent {
+export class GameSelectNameComponent {
   @Input() question!: GameStateQuestion;
   @Output() clickEvent = new EventEmitter<SelectedQuestionOption>();
 

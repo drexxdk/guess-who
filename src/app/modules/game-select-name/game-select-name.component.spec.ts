@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SelectNameComponent } from './select-name.component';
+import { GameSelectNameComponent } from './game-select-name.component';
 
 describe('SelectNameComponent', () => {
-  let component: SelectNameComponent;
-  let fixture: ComponentFixture<SelectNameComponent>;
+  let component: GameSelectNameComponent;
+  let fixture: ComponentFixture<GameSelectNameComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SelectNameComponent ]
-    })
-    .compileComponents();
+      declarations: [GameSelectNameComponent],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(SelectNameComponent);
+    fixture = TestBed.createComponent(GameSelectNameComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

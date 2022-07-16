@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SelectPhotoComponent } from './select-photo.component';
+import { GameSelectPhotoComponent } from './game-select-photo.component';
 
 describe('SelectPhotoComponent', () => {
-  let component: SelectPhotoComponent;
-  let fixture: ComponentFixture<SelectPhotoComponent>;
+  let component: GameSelectPhotoComponent;
+  let fixture: ComponentFixture<GameSelectPhotoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SelectPhotoComponent ]
-    })
-    .compileComponents();
+      declarations: [GameSelectPhotoComponent],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(SelectPhotoComponent);
+    fixture = TestBed.createComponent(GameSelectPhotoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

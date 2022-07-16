@@ -4,17 +4,12 @@ import {
   SelectedQuestionOption,
 } from '@portal-app/routes/game/state/game.interfaces';
 
-interface photo {
-  id: number;
-  url: string;
-}
-
 @Component({
-  selector: 'app-select-photo[question]',
-  templateUrl: './select-photo.component.html',
-  styleUrls: ['./select-photo.component.scss'],
+  selector: 'app-game-select-photo[question]',
+  templateUrl: './game-select-photo.component.html',
+  styleUrls: ['./game-select-photo.component.scss'],
 })
-export class SelectPhotoComponent {
+export class GameSelectPhotoComponent {
   @Input() question!: GameStateQuestion;
   @Output() clickEvent = new EventEmitter<SelectedQuestionOption>();
 
