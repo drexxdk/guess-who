@@ -1,4 +1,4 @@
-import { Game } from '@portal-app/routes/games/state/games.interfaces';
+import { BaseGame } from '@portal-app/routes/games/state/games.interfaces';
 import { QuestionStatus, Status } from '@portal-app/types/status.type';
 
 export interface GameState {
@@ -6,7 +6,7 @@ export interface GameState {
   game?: GameStateGame;
 }
 
-export interface GameStateGame extends Game {
+export interface GameStateGame extends BaseGame {
   question: GameStateQuestion;
 }
 
@@ -20,7 +20,7 @@ export interface GameStateQuestion {
   image?: string;
   options: GameStateOption[];
   status: QuestionStatus;
-  selected: boolean;
+  selectedOptionId?: number;
   answer?: GameStateAnswer;
 }
 
@@ -28,7 +28,6 @@ export interface GameStateOption {
   id: number;
   title?: string;
   image?: string;
-  selected: boolean;
 }
 
 export interface GameStateAnswer {

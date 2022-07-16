@@ -49,12 +49,12 @@ export const gameReducer = createReducer(
           question: {
             ...state.game.question,
             status: 'submitting',
-            selected: true,
-            options: state.game.question.options.map((option) =>
-              option.id === action.optionId
-                ? { ...option, selected: true }
-                : option
-            ),
+            selectedOptionId: action.optionId,
+            // options: state.game.question.options.map((option) =>
+            //   option.id === action.optionId
+            //     ? { ...option, selected: true }
+            //     : option
+            // ),
           },
         }
       : undefined,

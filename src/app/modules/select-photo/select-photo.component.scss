@@ -41,7 +41,6 @@
   @media (orientation: portrait) {
     max-width: $image-max-size + (20px * 2);
     max-height: calc(($image-max-size * 4) + (20px * 3));
-    flex-shrink: 0;
   }
 
   > div {
@@ -62,7 +61,7 @@
       #photos {
         gap: 20px;
         justify-content: center;
-        min-height: 10 1px;
+        min-height: 100px;
 
         app-image {
           min-width: 100px;

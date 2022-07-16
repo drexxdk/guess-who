@@ -20,12 +20,12 @@
         width="1"
         height="1"
       ></svg>
-      <div id="photos" [class.selected]="question.selected">
+      <div id="photos" [class.selected]="question.selectedOptionId">
         <app-image
           *ngFor="let option of question.options; let i = index"
-          [animation]="option.selected"
-          [selected]="option.selected"
-          [disabled]="question.selected"
+          [animation]="option.id === question.selectedOptionId"
+          [selected]="option.id === question.selectedOptionId"
+          [disabled]="question.selectedOptionId ? true : false"
           [src]="option.image"
           [ariaLabel]="'Select person face {{ i + 1 }}'"
           [alt]="'Person face {{ i }}'"

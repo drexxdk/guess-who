@@ -10,11 +10,11 @@ export interface GamesState {
   games: GamesStateGame[];
 }
 
-export interface GamesStateGame extends Game {
+export interface GamesStateGame extends BaseGame {
   questions: number;
 }
 
-export interface Game {
+export interface BaseGame {
   id: number;
   type: GameType;
   gameStatus: GameStatus;

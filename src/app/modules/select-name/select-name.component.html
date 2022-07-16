@@ -2,10 +2,10 @@
   <div>
     <app-image
       [src]="question.image"
-      [text]="question.selected ? undefined : question.title"
+      [text]="question.selectedOptionId ? undefined : question.title"
       [ariaLabel]="'Toggle title shown'"
       [alt]="'Person face'"
-      [selected]="question.selected"
+      [selected]="question.selectedOptionId ? true : false"
       [validation]="
         question.answer
           ? question.answer.isCorrect
@@ -18,12 +18,12 @@
   </div>
 </div>
 <div id="options">
-  <ul [class.selected]="question.selected">
+  <ul [class.selected]="question.selectedOptionId">
     <li *ngFor="let option of question.options">
       <app-button
-        [animation]="option.selected"
-        [selected]="option.selected"
-        [disabled]="question.selected"
+        [animation]="option.id === question.selectedOptionId"
+        [selected]="option.id === question.selectedOptionId"
+        [disabled]="question.selectedOptionId ? true : false"
         [validation]="
           question.answer
             ? question.answer.selectedOptionId === option.id &&

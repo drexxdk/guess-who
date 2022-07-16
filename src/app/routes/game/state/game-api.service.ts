@@ -89,10 +89,10 @@ export class GameApiService {
       id: 3,
       image: 'assets/people/1.webp',
       options: [
-        { id: 1, title: 'Simon Jensen', selected: false },
-        { id: 2, title: 'Jens Frederiksen', selected: false },
-        { id: 3, title: 'Hans Mortensen', selected: false }, //correct
-        { id: 4, title: 'Mikkel Hansen', selected: false },
+        { id: 1, title: 'Simon Jensen' },
+        { id: 2, title: 'Jens Frederiksen' },
+        { id: 3, title: 'Hans Mortensen' }, //correct
+        { id: 4, title: 'Mikkel Hansen' },
       ],
       title: 'Who is this?',
       currentQuestionNumber: 1,
@@ -100,7 +100,6 @@ export class GameApiService {
       nextQuestionId: undefined,
       totalQuestions: 1,
       status: 'loaded',
-      selected: false,
     };
   }
 
@@ -111,22 +110,18 @@ export class GameApiService {
         {
           id: 5,
           // image: 'assets/people/1.webp',
-          selected: false,
         },
         {
           id: 6,
           image: 'assets/people/2.webp', //correct
-          selected: false,
         },
         {
           id: 7,
           image: 'assets/people/3.webp',
-          selected: false,
         },
         {
           id: 8,
           image: 'assets/people/4.webp',
-          selected: false,
         },
       ],
       title: 'Who is Simon?',
@@ -135,7 +130,6 @@ export class GameApiService {
       nextQuestionId: 9,
       totalQuestions: 2,
       status: 'loaded',
-      selected: false,
     };
   }
 
@@ -146,22 +140,18 @@ export class GameApiService {
         {
           id: 10,
           image: 'assets/people/5.webp',
-          selected: false,
         },
         {
           id: 11,
           image: 'assets/people/6.webp',
-          selected: false,
         },
         {
           id: 12,
           image: 'assets/people/7.webp',
-          selected: false,
         },
         {
           id: 13,
           image: 'assets/people/8.webp', //correct
-          selected: false,
         },
       ],
       title: 'Who is Michelle?',
@@ -170,7 +160,6 @@ export class GameApiService {
       nextQuestionId: undefined,
       totalQuestions: 2,
       status: 'loaded',
-      selected: false,
     };
   }
 }

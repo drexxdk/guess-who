@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { Game, GamesStateGame } from './games.interfaces';
+import { GamesStateGame } from './games.interfaces';
 
 const name = '[Games] ';
 
