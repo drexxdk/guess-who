@@ -7,6 +7,7 @@ import { gamesFeatureKey, gamesReducer } from './state/games.reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { GamesEffects } from './state/games.effects';
 import { ButtonModule } from '@portal-app/modules/button/button.module';
+import { LoadingModule } from '@portal-app/modules/loading/loading.module';
 
 @NgModule({
   declarations: [GamesComponent],
@@ -16,6 +17,7 @@ import { ButtonModule } from '@portal-app/modules/button/button.module';
     StoreModule.forFeature(gamesFeatureKey, gamesReducer),
     EffectsModule.forFeature([GamesEffects]),
     ButtonModule,
+    LoadingModule,
   ],
 })
 export class GamesModule {}

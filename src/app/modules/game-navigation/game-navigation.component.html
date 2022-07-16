@@ -1,0 +1,19 @@
+<ng-container
+  *ngIf="{
+    navigation: navigation$ | async,
+    status: status$ | async
+  } as sub"
+>
+  <ng-container *ngIf="sub.status === 'success' && sub.navigation">
+    <label
+      >{{ sub.navigation.currentQuestionNumber }} of
+      {{ sub.navigation.totalQuestions }}</label
+    >
+    <button
+      *ngIf="sub.navigation.answered && sub.navigation.nextQuestionId"
+      (click)="onClickNextQuestion(sub.navigation.nextQuestionId)"
+    >
+      <app-icon [svg]="'chevron-right'"></app-icon>
+    </button>
+  </ng-container>
+</ng-container>

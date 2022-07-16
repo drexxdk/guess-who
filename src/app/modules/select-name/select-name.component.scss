@@ -9,7 +9,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 2rem;
+  padding: 20px;
 
   @media (orientation: portrait) {
     flex-direction: column;
@@ -24,21 +24,25 @@
   }
 
   @media (orientation: landscape) {
-    gap: 2rem;
+    gap: 20px;
     justify-content: center;
   }
 }
 
 #image {
-  position: sticky;
-  top: 0;
+  @media (min-height: ($header-height + 100px + (20px * 2))) {
+    position: sticky;
+    top: 0;
+  }
+
   overflow: hidden;
   flex-shrink: 0;
-  background-color: $body-background-color;
   z-index: 1;
+  min-width: 100px;
+  min-height: 100px;
 
   @media (orientation: portrait) {
-    padding-bottom: 2rem;
+    padding-bottom: 20px;
 
     app-image ::ng-deep label {
       @media (max-width: 540px) {
@@ -46,7 +50,7 @@
       }
 
       @media (min-width: 541px) {
-        font-size: 3.5rem;
+        font-size: 35px;
       }
     }
   }
@@ -61,7 +65,7 @@
       }
 
       @media (min-height: 581px) {
-        font-size: 3.5rem;
+        font-size: 35px;
       }
     }
   }
@@ -76,7 +80,7 @@
       max-height: min($image-max-size, 50vh);
       flex-shrink: 0;
       aspect-ratio: 1;
-      gap: 2rem;
+      gap: 20px;
     }
 
     @media (orientation: landscape) {
@@ -103,7 +107,6 @@
   ul {
     display: grid;
     gap: 10px;
-    // grid-template-columns: repeat(auto-fit, minmax(min(35rem, 100%), 1fr));
 
     @media (orientation: portrait) {
       margin: 0 auto;
@@ -111,11 +114,10 @@
     }
 
     @media (orientation: landscape) {
-      // it ignores the padding that should be at the bottom without this hack
-      margin-top: -2rem;
-      margin-bottom: -2rem;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+      margin-top: -20px;
+      margin-bottom: -20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
 
     &.selected button:not(.selected) {

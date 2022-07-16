@@ -8,9 +8,15 @@
     <app-loading></app-loading>
   </ng-container>
   <ng-container *ngIf="sub.game && sub.status === 'success'">
-    <app-select-name *ngIf="sub.game.type === 'select-name'"></app-select-name>
+    <app-select-name
+      *ngIf="sub.game.type === 'select-name'"
+      [question]="sub.game.question"
+      (clickEvent)="onClick($event)"
+    ></app-select-name>
     <app-select-photo
       *ngIf="sub.game.type === 'select-photo'"
+      [question]="sub.game.question"
+      (clickEvent)="onClick($event)"
     ></app-select-photo>
   </ng-container>
 </ng-container>

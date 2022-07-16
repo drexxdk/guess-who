@@ -1,31 +1,40 @@
-<div id="image">
+<div id="image" *ngIf="question.image && question.options.length">
   <div>
     <app-image
-      [src]="'assets/people/1.webp'"
-      [text]="result ? undefined : 'Who is this?'"
+      [src]="question.image"
+      [text]="question.selected ? undefined : question.title"
       [ariaLabel]="'Toggle title shown'"
       [alt]="'Person face'"
-      [selected]="result !== undefined"
+      [selected]="question.selected"
       [validation]="
-        result ? (result === selected ? 'valid' : 'invalid') : undefined
+        question.answer
+          ? question.answer.isCorrect
+            ? 'valid'
+            : 'invalid'
+          : undefined
       "
-      [disabled]="result ? true : false"
+      [disabled]="question.answer ? true : false"
     ></app-image>
   </div>
 </div>
 <div id="options">
-  <ul [class.selected]="selected">
-    <li *ngFor="let person of persons">
+  <ul [class.selected]="question.selected">
+    <li *ngFor="let option of question.options">
       <app-button
-        [animation]="selected === person.id"
-        [selected]="selected === person.id"
-        [disabled]="selected ? true : false"
+        [animation]="option.selected"
+        [selected]="option.selected"
+        [disabled]="question.selected"
         [validation]="
-          result ? (result === person.id ? 'valid' : 'invalid') : undefined
+          question.answer
+            ? question.answer.selectedOptionId === option.id &&
+              question.answer.correctOptionId === option.id
+              ? 'valid'
+              : 'invalid'
+            : undefined
         "
-        (clickEvent)="onClick(person.id)"
+        (clickEvent)="onClick(option.id)"
       >
-        {{ person.name }}
+        {{ option.title }}
       </app-button>
     </li>
   </ul>

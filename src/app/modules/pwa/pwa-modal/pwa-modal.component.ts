@@ -5,8 +5,4 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pwa-modal.component.html',
   styleUrls: ['./pwa-modal.component.scss'],
 })
-export class PwaModalComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export class PwaModalComponent {}

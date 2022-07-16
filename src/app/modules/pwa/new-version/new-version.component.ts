@@ -7,14 +7,12 @@ import { PwaService } from '../pwa.service';
   templateUrl: './new-version.component.html',
   styleUrls: ['./new-version.component.scss'],
 })
-export class NewVersionComponent implements OnInit {
+export class NewVersionComponent {
   public readonly modalVersion$: Observable<boolean>;
 
   constructor(private pwaService: PwaService) {
     this.modalVersion$ = this.pwaService.modalVersion$;
   }
-
-  ngOnInit(): void {}
 
   onClickCloseVersion(): void {
     this.pwaService.closeVersion();

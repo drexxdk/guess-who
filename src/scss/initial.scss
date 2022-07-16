@@ -7,7 +7,7 @@
   -webkit-tap-highlight-color: transparent; // disable android focus glow
 
   scrollbar-width: thin;
-  scrollbar-color: $thumb-color $track-color;
+  scrollbar-color: rgb($thumb-color) rgb($track-color);
 }
 
 *,
@@ -26,8 +26,16 @@ html {
   height: 100%;
   box-sizing: border-box;
 
+  scrollbar-width: thin; /* length not currently implemented 13 april 2020 */
+  scrollbar-color: rgb($thumb-color) rgb($track-color);
+
+  * {
+    scrollbar-width: thin; /* length not currently implemented 13 april 2020 */
+    scrollbar-color: rgb($thumb-color) rgb($track-color);
+  }
+
   ::-webkit-scrollbar-track {
-    background: $track-color;
+    background: rgb($track-color);
   }
 
   ::-webkit-scrollbar {
@@ -35,22 +43,28 @@ html {
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: $thumb-color;
+    background-color: rgb($thumb-color);
     border-radius: 6px;
-    border: 3px solid $track-color;
+    border: 3px solid rgb($track-color);
   }
 }
 body {
   min-height: 100%;
-  background-color: $body-background-color;
   letter-spacing: $body-font-letter-spacing;
   user-select: none;
+  background: $body-background;
+}
+
+body,
+button,
+a {
+  color: rgb($body-color);
 }
 
 body,
 button {
   font-family: $body-font-family;
-  color: $body-color;
+  font-size: $base-font-size;
 }
 
 img {

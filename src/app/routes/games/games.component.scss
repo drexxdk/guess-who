@@ -1,5 +1,10 @@
 @import "app";
 
+:host {
+  display: grid;
+  place-items: center;
+}
+
 ul {
   display: grid;
   gap: 10px;

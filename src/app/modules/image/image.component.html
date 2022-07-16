@@ -12,13 +12,14 @@
   [attr.data-validation]="validation"
   [class.selected]="selected"
   [class.animation]="animation"
-  [class.border-on-hover]="!text"
+  [class.border-on-hover]="!text || !src"
 >
   <div>
     <div class="loading">
       <app-icon svg="loading"></app-icon>
     </div>
-    <img [src]="src" [alt]="alt" />
+    <img class="image" *ngIf="src" [src]="src" [alt]="alt" />
+    <app-icon class="image" *ngIf="!src" svg="image"></app-icon>
     <app-headline
       *ngIf="text || (selected && validation !== undefined)"
       [attr.data-shown]="textShown || validation !== undefined"

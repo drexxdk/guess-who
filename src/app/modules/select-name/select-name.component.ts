@@ -1,35 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-
-interface person {
-  id: number;
-  name: string;
-}
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  GameStateQuestion,
+  SelectedQuestionOption,
+} from '@portal-app/routes/game/state/game.interfaces';
 
 @Component({
-  selector: 'app-select-name',
+  selector: 'app-select-name[question]',
   templateUrl: './select-name.component.html',
   styleUrls: ['./select-name.component.scss'],
 })
-export class SelectNameComponent implements OnInit {
-  persons: person[] = [
-    { id: 1, name: 'Simon Jensen' },
-    { id: 2, name: 'Jens Frederiksen' },
-    { id: 3, name: 'Hans Mortensen' },
-    { id: 4, name: 'Mikkel Hansen' },
-  ];
-  hover: number | undefined;
-  selected: number | undefined;
-  result: number | undefined;
+export class SelectNameComponent {
+  @Input() question!: GameStateQuestion;
+  @Output() clickEvent = new EventEmitter<SelectedQuestionOption>();
 
-  constructor() {}
-
-  ngOnInit(): void {}
-
-  onClick(id: number) {
-    if (!this.selected) {
-      this.selected = id;
-    }
-
-    this.result = 3;
+  onClick(optionId: number) {
+    this.clickEvent.emit({ questionId: this.question.id, optionId: optionId });
   }
 }

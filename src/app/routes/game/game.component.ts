@@ -1,9 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { GamesState } from '@portal-app/routes/games/state/games.interfaces';
 import { take } from 'rxjs';
 import * as GameActions from './state/game.actions';
+import { SelectedQuestionOption } from './state/game.interfaces';
 import * as GameSelectors from './state/game.selectors';
 
 @Component({
@@ -39,5 +40,14 @@ export class GameComponent implements OnInit, OnDestroy {
         debugger;
       }
     });
+  }
+
+  onClick(selectedQuestionOption: SelectedQuestionOption) {
+    this.gameStore.dispatch(
+      GameActions.submitQuestionAnswer({
+        questionId: selectedQuestionOption.questionId,
+        optionId: selectedQuestionOption.optionId,
+      })
+    );
   }
 }

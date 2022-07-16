@@ -6,7 +6,7 @@ import { validation } from '@portal-app/types/validation.type';
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent {
   @Input() validation?: validation;
   @Input() selected: boolean = false;
   @Input() disabled: boolean = false;
@@ -14,8 +14,6 @@ export class ButtonComponent implements OnInit {
 
   @Output() clickEvent = new EventEmitter<void>();
   constructor() {}
-
-  ngOnInit(): void {}
 
   onClick() {
     this.clickEvent.emit();

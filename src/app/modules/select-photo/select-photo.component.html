@@ -1,5 +1,7 @@
-<div id="question">
-  <app-headline [align]="'center'"><span>Who is Simon?</span></app-headline>
+<div id="question" *ngIf="question.title && question.options.length">
+  <app-headline [align]="'center'"
+    ><span>{{ question.title }}</span></app-headline
+  >
 </div>
 <div id="options">
   <div>
@@ -18,18 +20,30 @@
         width="1"
         height="1"
       ></svg>
-      <div id="photos" [class.selected]="selected">
+      <div id="photos" [class.selected]="question.selected">
         <app-image
-          *ngFor="let photo of photos; let i = index"
-          [animation]="selected === photo.id"
-          [disabled]="selected ? true : false"
-          [selected]="selected === photo.id"
-          [src]="photo.url"
+          *ngFor="let option of question.options; let i = index"
+          [animation]="option.selected"
+          [selected]="option.selected"
+          [disabled]="question.selected"
+          [src]="option.image"
           [ariaLabel]="'Select person face {{ i + 1 }}'"
           [alt]="'Person face {{ i }}'"
-          (clickEvent)="onClick(photo.id)"
+          (clickEvent)="onClick(option.id)"
+          [text]="
+            option.image
+              ? undefined
+              : question.answer
+              ? undefined
+              : 'Image missing'
+          "
           [validation]="
-            result ? (result === photo.id ? 'valid' : 'invalid') : undefined
+            question.answer
+              ? question.answer.selectedOptionId === option.id &&
+                question.answer.correctOptionId === option.id
+                ? 'valid'
+                : 'invalid'
+              : undefined
           "
         ></app-image>
       </div>

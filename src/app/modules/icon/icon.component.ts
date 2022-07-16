@@ -7,11 +7,7 @@ type size = 10 | 12 | 14 | 16 | 18 | 20 | 22 | 24 | 26 | 28;
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss'],
 })
-export class IconComponent implements OnInit {
+export class IconComponent {
   @Input() svg!: string;
   @Input() size?: size;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

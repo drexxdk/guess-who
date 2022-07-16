@@ -7,12 +7,10 @@ import { PwaService } from '../pwa.service';
   templateUrl: './online-status.component.html',
   styleUrls: ['./online-status.component.scss'],
 })
-export class OnlineStatusComponent implements OnInit {
+export class OnlineStatusComponent {
   public readonly isOnline$: Observable<boolean>;
 
   constructor(private pwaService: PwaService) {
     this.isOnline$ = this.pwaService.isOnline$;
   }
-
-  ngOnInit(): void {}
 }

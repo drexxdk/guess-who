@@ -1,5 +1,5 @@
 import { Game } from '@portal-app/routes/games/state/games.interfaces';
-import { Status } from '@portal-app/types/status.type';
+import { QuestionStatus, Status } from '@portal-app/types/status.type';
 
 export interface GameState {
   status: Status;
@@ -7,25 +7,45 @@ export interface GameState {
 }
 
 export interface GameStateGame extends Game {
-  questions: GameStateQuestion[];
-  answers: GameStateAnswer[];
+  question: GameStateQuestion;
 }
 
 export interface GameStateQuestion {
   id: number;
-  title: string;
+  currentQuestionNumber: number;
+  currentQuestionId: number;
+  nextQuestionId?: number;
+  totalQuestions: number;
+  title?: string;
+  image?: string;
   options: GameStateOption[];
+  status: QuestionStatus;
+  selected: boolean;
+  answer?: GameStateAnswer;
 }
 
 export interface GameStateOption {
   id: number;
   title?: string;
   image?: string;
+  selected: boolean;
 }
 
 export interface GameStateAnswer {
-  questionindex: number;
-  answerIndex?: number;
+  selectedOptionId?: number;
+  correctOptionId?: number;
   isCorrect: boolean;
-  correctIndex?: number;
+}
+
+export interface GameNavigation {
+  currentQuestionNumber: number;
+  currentQuestionId: number;
+  totalQuestions: number;
+  nextQuestionId?: number;
+  answered: boolean;
+}
+
+export interface SelectedQuestionOption {
+  questionId: number;
+  optionId: number;
 }

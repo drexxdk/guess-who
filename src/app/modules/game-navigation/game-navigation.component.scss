@@ -1,0 +1,40 @@
+@import "app";
+
+:host {
+  &:empty {
+    display: none;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  label {
+    padding: 0 20px;
+  }
+
+  button {
+    padding: 0 10px;
+    line-height: $header-height;
+    width: $header-height;
+    height: $header-height;
+    display: grid;
+    place-items: center;
+    background-color: rgb($primary);
+    color: rgb($primary-accent);
+    font-weight: bold;
+
+    @mixin active {
+      background-color: rgba($primary, $opacity-large);
+    }
+
+    &:active {
+      @include active;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        @include active;
+      }
+    }
+  }
+}

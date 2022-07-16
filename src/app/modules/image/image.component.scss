@@ -27,14 +27,15 @@
       position: relative;
       border-radius: 5%;
       overflow: hidden;
-      background-color: $gray-200;
+      background-color: rgb($gray-800);
+      height: 100%;
 
       &:before {
         content: "";
         top: 0;
         bottom: 0;
         pointer-events: none;
-        border: 5px solid $gray-300;
+        border: 5px solid rgb($gray-700);
       }
     }
 
@@ -52,21 +53,21 @@
 
     @media (hover: hover) {
       &.border-on-hover:hover > div:before {
-        border-color: $gray-500;
+        border-color: rgb($gray-500);
         z-index: 1;
       }
     }
 
     &[data-validation="valid"] {
-      --color: #{$success};
-      --accent: #{$success-accent};
-      --pulse-color: #{$success};
+      --color: #{rgb($success)};
+      --accent: #{rgb($success-accent)};
+      --pulse-color: #{rgb($success)};
     }
 
     &[data-validation="invalid"] {
-      --color: #{$danger};
-      --accent: #{$danger-accent};
-      --pulse-color: #{$danger};
+      --color: #{rgb($danger)};
+      --accent: #{rgb($danger-accent)};
+      --pulse-color: #{rgb($danger)};
     }
 
     &.selected {
@@ -103,7 +104,7 @@
       display: grid;
       place-items: center;
       pointer-events: none;
-      color: $gray-500;
+      color: rgb($gray-500);
     }
 
     .loading app-icon {
@@ -111,7 +112,7 @@
       height: 25%;
     }
 
-    img {
+    .image {
       width: 100%;
       height: 100%;
       display: block;
@@ -120,8 +121,7 @@
     }
 
     @mixin active {
-      background-color: $image-overlay-background-hover;
-      color: $image-overlay-text-hover;
+      background-color: rgba($black, $opacity-medium);
     }
 
     &:active app-headline {
@@ -129,7 +129,7 @@
     }
 
     @media (hover: hover) {
-      &:hover app-headline {
+      &:not(.border-on-hover):hover app-headline {
         @include active;
       }
     }
@@ -141,8 +141,7 @@
       right: 0;
       padding: 5%;
       pointer-events: none;
-      background: $image-overlay-background;
-      color: $image-overlay-text;
+      background-color: rgba($gray-900, $opacity-medium);
       transform: translateY(0%);
       transition: transform 0.3s ease-in-out;
 

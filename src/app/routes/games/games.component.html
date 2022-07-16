@@ -4,8 +4,8 @@
     isLoading: isLoading$ | async
   } as sub"
 >
-  <ng-container *ngIf="sub.isLoading">
-    <label>Loading ...</label>
+  <ng-container *ngIf="sub.isLoading"
+    ><app-loading></app-loading>
   </ng-container>
   <ng-container *ngIf="sub.games">
     <ul>

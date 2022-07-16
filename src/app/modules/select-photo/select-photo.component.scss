@@ -9,32 +9,39 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 0 20px 20px 20px;
-  justify-content: center;
+  padding-bottom: 20px;
   align-items: center;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    flex-grow: 1;
+  }
 }
 
 #question {
-  padding: 20px 0;
+  width: 100%;
+  padding: 20px;
   position: sticky;
   top: 0;
-  background-color: $body-background-color;
   z-index: 2;
 }
 
 #options {
+  padding: 0 20px;
   width: 100%;
   height: 100%;
   gap: 20px;
 
   @media (orientation: landscape) {
-    max-width: calc(($image-max-size * 4) + (20px * 3));
+    max-width: calc(($image-max-size * 4) + (20px * 5));
     max-height: $image-max-size;
   }
 
   @media (orientation: portrait) {
-    max-width: $image-max-size;
+    max-width: $image-max-size + (20px * 2);
     max-height: calc(($image-max-size * 4) + (20px * 3));
+    flex-shrink: 0;
   }
 
   > div {
@@ -57,6 +64,10 @@
         justify-content: center;
         min-height: 10 1px;
 
+        app-image {
+          min-width: 100px;
+        }
+
         @media (orientation: landscape) {
           display: flex;
         }
@@ -73,14 +84,15 @@
   }
 
   // horizontal then vertical
-  @media (min-aspect-ratio: 100/100) and (max-aspect-ratio: 100/50),
-    (min-aspect-ratio: 50/100) and (max-aspect-ratio: 100/100),
-    (min-width: (400px * 2 + 20px)) and (min-height: (400px * 2 + 20px)) {
+  @media (min-aspect-ratio: 100/100) and (max-aspect-ratio: 100/50) and (min-width: (100px * 2 + (20px * 3))),
+    (min-aspect-ratio: 50/100) and (max-aspect-ratio: 100/100) and (min-height: (100px * 2 + (20px * 3))),
+    (min-width: (400px * 2 + (20px * 3))) and (min-height: (400px * 2 + (20px * 3))) {
     // 2x2
     display: grid;
     justify-content: center;
     max-width: calc($image-max-size * 2 + 20px);
     max-height: calc($image-max-size * 2 + 20px);
+    flex-shrink: unset;
 
     > div {
       display: inline-flex;

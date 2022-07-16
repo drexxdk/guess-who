@@ -1,9 +1,8 @@
 @import "app";
 
 :host {
-  border-bottom: 1px solid $gray-400;
-  background-color: $gray-200;
-  color: $body-color;
+  border-bottom: 1px solid rgba($gray-600, $opacity-small);
+  background-color: rgba($gray-800, $opacity-small);
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -21,16 +20,15 @@
 
 .logo {
   line-height: $header-height;
-  padding: 0 10px;
-  border-right: 1px solid $gray-200;
+  width: $header-height;
+  border-right: 1px solid rgba($gray-600, $opacity-small);
   height: $header-height;
-  display: flex;
-  color: $primary;
+  display: grid;
+  place-items: center;
+  color: rgb($primary);
 
   @mixin active {
-    text-decoration: none;
-    background-color: $primary;
-    color: $primary-accent;
+    background-color: rgb($gray-900);
   }
 
   &.active-link,

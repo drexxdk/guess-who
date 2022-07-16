@@ -6,7 +6,7 @@ import * as GameActions from './game.actions';
 import { of } from 'rxjs';
 import { Router } from '@angular/router';
 import { GameState } from './game.interfaces';
-import { Store } from '@ngrx/store';
+import { createAction, Store } from '@ngrx/store';
 
 @Injectable()
 export class GameEffects {
@@ -21,7 +21,6 @@ export class GameEffects {
     return this.actions$.pipe(
       ofType(GameActions.fetchGame),
       switchMap((action) => {
-        this.gameStore.dispatch(GameActions.fetchGameLoading());
         return this.gameApiService.fetchGame(action.id).pipe(
           switchMap((game) => {
             return [GameActions.fetchGameSuccess({ game: game })];
@@ -45,4 +44,40 @@ export class GameEffects {
     },
     { dispatch: false }
   );
+
+  submitQuestionAnswer$ = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(GameActions.submitQuestionAnswer),
+      switchMap((action) => {
+        return this.gameApiService
+          .submitQuestionAnswer(action.questionId, action.optionId)
+          .pipe(
+            switchMap((answer) => {
+              return [
+                GameActions.submitQuestionAnswerSuccess({ answer: answer }),
+              ];
+            }),
+            catchError((error) => {
+              return of(GameActions.fetchGameFailure({ error: error }));
+            })
+          );
+      })
+    );
+  });
+
+  fetchQuestion$ = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(GameActions.fetchQuestion),
+      switchMap((action) => {
+        return this.gameApiService.fetchQuestion(action.questionId).pipe(
+          switchMap((question) => {
+            return [GameActions.fetchQuestionSuccess({ question: question })];
+          }),
+          catchError((error) => {
+            return of(GameActions.fetchQuestionFailure({ error: error }));
+          })
+        );
+      })
+    );
+  });
 }

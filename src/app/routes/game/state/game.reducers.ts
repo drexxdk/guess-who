@@ -11,7 +11,7 @@ export const initialGameState: GameState = {
 
 export const gameReducer = createReducer(
   initialGameState,
-  on(GameActions.fetchGameLoading, (state, action) => ({
+  on(GameActions.fetchGame, (state, action) => ({
     ...state,
     status: 'loading',
   })),
@@ -28,5 +28,84 @@ export const gameReducer = createReducer(
     ...state,
     status: 'pending',
     game: undefined,
+  })),
+  on(GameActions.fetchQuestion, (state) => ({
+    ...state,
+    game: state.game
+      ? {
+          ...state.game,
+          question: {
+            ...state.game.question,
+            status: 'pending',
+          },
+        }
+      : undefined,
+  })),
+  on(GameActions.submitQuestionAnswer, (state, action) => ({
+    ...state,
+    game: state.game
+      ? {
+          ...state.game,
+          question: {
+            ...state.game.question,
+            status: 'submitting',
+            selected: true,
+            options: state.game.question.options.map((option) =>
+              option.id === action.optionId
+                ? { ...option, selected: true }
+                : option
+            ),
+          },
+        }
+      : undefined,
+  })),
+  on(GameActions.submitQuestionAnswerSuccess, (state, action) => ({
+    ...state,
+    game: state.game
+      ? {
+          ...state.game,
+          question: {
+            ...state.game.question,
+            status: 'submitted',
+            answer: action.answer,
+          },
+          // answers: [...state.game.answers, action.answer],
+        }
+      : undefined,
+  })),
+
+  on(GameActions.submitQuestionAnswerFailure, (state, action) => ({
+    ...state,
+    game: state.game
+      ? {
+          ...state.game,
+          question: {
+            ...state.game.question,
+            status: 'error',
+          },
+        }
+      : undefined,
+  })),
+  on(GameActions.fetchQuestionSuccess, (state, action) => ({
+    ...state,
+    status: 'success',
+    game: state.game
+      ? {
+          ...state.game,
+          question: action.question,
+        }
+      : undefined,
+  })),
+  on(GameActions.fetchQuestionFailure, (state, action) => ({
+    ...state,
+    game: state.game
+      ? {
+          ...state.game,
+          question: {
+            ...state.game.question,
+            status: 'error',
+          },
+        }
+      : undefined,
   }))
 );
