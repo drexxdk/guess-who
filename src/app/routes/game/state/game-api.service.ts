@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable, of, ReplaySubject, throwError } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
+import { Observable, ReplaySubject, throwError } from 'rxjs';
 import {
   GameStateAnswer,
   GameStateGame,
@@ -10,11 +11,11 @@ import {
   providedIn: 'root',
 })
 export class GameApiService {
-  constructor() {}
+  constructor(private translateService: TranslateService) {}
 
   public fetchGame(id: number): Observable<GameStateGame> {
     if (id !== 1 && id !== 2) {
-      return throwError(() => new Error('game not found'));
+      return throwError(() => new Error(this.translateService.instant('GAME_API.GAME_NOT_FOUND')));
     }
     const subject = new ReplaySubject<GameStateGame>(1);
     const game: GameStateGame = id === 1 ? this.game1() : this.game2();
@@ -44,7 +45,7 @@ export class GameApiService {
       return throwError(() => new Error('Question not found'));
     }
     const subject = new ReplaySubject<GameStateAnswer>(1);
-    let correctOptionId: number = 0;
+    let correctOptionId = 0;
     if (questionId === 3) {
       correctOptionId = 3;
     }

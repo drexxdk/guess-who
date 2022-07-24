@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HostListener } from '@angular/core';
-import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { routerAnimation } from './animations/animations';
 
 @Component({
@@ -10,10 +10,6 @@ import { routerAnimation } from './animations/animations';
   animations: [routerAnimation()],
 })
 export class AppComponent {
-  title = 'guess-who';
-
-  constructor(private contexts: ChildrenOutletContexts) {}
-
   @HostListener('contextmenu', ['$event'])
   public onContextMenu($event: Event): void {
     if (

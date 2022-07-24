@@ -4,7 +4,7 @@ import { catchError, exhaustMap, switchMap, tap } from 'rxjs/operators';
 import { GameApiService } from './game-api.service';
 import * as GameActions from './game.actions';
 import { of } from 'rxjs';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { GameState } from './game.interfaces';
 import { createAction, Store } from '@ngrx/store';
 
@@ -38,7 +38,8 @@ export class GameEffects {
       return this.actions$.pipe(
         ofType(GameActions.fetchGameFailure),
         tap((error) => {
-          this.router.navigate(['/error'], { skipLocationChange: true });
+          const extras: NavigationExtras = {state:{error,}, skipLocationChange: true};
+          this.router.navigate(['/error'], extras);
         })
       );
     },

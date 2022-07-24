@@ -1,0 +1,8 @@
+{
+  "APP_TITLE": "Guess Who",
+  "GAME_SELECT_PHOTO_OPTION_ARIA_LABEL": "Select person {{number}}",
+  "CHANGE_LANGUAGE": "Change language",
+  "GAME_API": {
+    "GAME_NOT_FOUND": "Game not found"
+  }
+}

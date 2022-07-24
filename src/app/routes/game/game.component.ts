@@ -35,9 +35,6 @@ export class GameComponent implements OnInit, OnDestroy {
       const id = paramId ? parseInt(paramId) : undefined;
       if (id) {
         this.gameStore.dispatch(GameActions.fetchGame({ id: id }));
-      } else {
-        // redirect to error page
-        debugger;
       }
     });
   }

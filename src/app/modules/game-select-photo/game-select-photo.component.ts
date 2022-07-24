@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import {
   GameStateQuestion,
   SelectedQuestionOption,
@@ -12,6 +13,9 @@ import {
 export class GameSelectPhotoComponent {
   @Input() question!: GameStateQuestion;
   @Output() clickEvent = new EventEmitter<SelectedQuestionOption>();
+
+  constructor(
+    public translate: TranslateService) {}
 
   onClick(optionId: number) {
     this.clickEvent.emit({ questionId: this.question.id, optionId: optionId });

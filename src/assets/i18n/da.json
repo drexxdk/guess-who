@@ -1,0 +1,8 @@
+{
+  "APP_TITLE": "Gæt hvem",
+  "GAME_SELECT_PHOTO_OPTION_ARIA_LABEL": "Vælg person {{number}}",
+  "CHANGE_LANGUAGE": "Skift sprog",
+  "GAME_API": {
+    "GAME_NOT_FOUND": "Spil ikke fundet"
+  }
+}

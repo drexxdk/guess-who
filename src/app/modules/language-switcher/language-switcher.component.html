@@ -1,0 +1,3 @@
+{{'CHANGE_LANGUAGE' | translate }} : <select *ngIf="selectedLang" #selLang (change)="translateLanguageTo(selLang.value)">
+  <option *ngFor="let language of translate.getLangs()" [value]="language" [attr.selected]="language === selectedLang ? true : null">{{ language }}</option>
+</select>

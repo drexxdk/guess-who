@@ -9,11 +9,12 @@ import {
   gameFeatureKey,
   gameReducer,
 } from '@portal-app/routes/game/state/game.reducers';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [GameNavigationComponent],
   imports: [
-    CommonModule,
+    SharedModule,
     IconModule,
     StoreModule.forFeature(gameFeatureKey, gameReducer),
     EffectsModule.forFeature([GameEffects]),

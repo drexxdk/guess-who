@@ -27,7 +27,7 @@
           [selected]="option.id === question.selectedOptionId"
           [disabled]="question.selectedOptionId ? true : false"
           [src]="option.image"
-          [ariaLabel]="'Select person face {{ i + 1 }}'"
+          [ariaLabel]="'GAME_SELECT_PHOTO_OPTION_ARIA_LABEL' | translate: {number: i + 1}"
           [alt]="'Person face {{ i }}'"
           (clickEvent)="onClick(option.id)"
           [text]="

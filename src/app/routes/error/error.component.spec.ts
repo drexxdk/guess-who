@@ -10,7 +10,7 @@ describe('ErrorComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ ErrorComponent ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ErrorComponent);
     component = fixture.componentInstance;

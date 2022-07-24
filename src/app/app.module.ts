@@ -12,7 +12,14 @@ import { HeaderModule } from './modules/header/header.module';
 import { IconModule } from './modules/icon/icon.module';
 import { PwaModule } from './modules/pwa/pwa.module';
 import { PwaService } from './modules/pwa/pwa.service';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 // import { AngularFireModule } from '@angular/fire/compat';
+
+export function httpTranslateLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [AppComponent],
@@ -41,8 +48,16 @@ import { PwaService } from './modules/pwa/pwa.service';
     // AngularFirestoreModule,
     // AngularFireStorageModule,
     // AngularFireDatabaseModule,
+
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [PwaService],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

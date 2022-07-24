@@ -4,11 +4,11 @@
     class="logo"
     routerLinkActive="active-link"
     [routerLinkActiveOptions]="{ exact: true }"
-    aria-label="Home"
+    attr.aria-label="{{'APP_TITLE' | translate}}"
   >
     <app-icon svg="logo" [size]="24"></app-icon>
   </a>
-  <!-- <app-navbar></app-navbar> -->
   <div class="spacer"></div>
+  <app-language-switcher></app-language-switcher>
   <app-game-navigation></app-game-navigation>
 </div>
