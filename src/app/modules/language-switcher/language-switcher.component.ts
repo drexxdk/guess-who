@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { langType } from '@portal-app/types/lang.type';
 
 @Component({
   selector: 'app-language-switcher',
@@ -7,12 +8,11 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./language-switcher.component.scss'],
 })
 export class LanguageSwitcherComponent {
-  selectedLang?: string;
+  selectedLang?: langType;
 
   constructor(public translate: TranslateService) {
     translate.addLangs(['en', 'da']);
-    const lang = localStorage.getItem('lang');
-    debugger;
+    const lang = localStorage.getItem('lang') as langType;
     if(lang && (lang === 'da')) {
       this.selectedLang = lang;
     } else {
