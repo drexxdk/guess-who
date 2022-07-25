@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { InstallAppComponent } from './install-app/install-app.component';
 import { NewVersionComponent } from './new-version/new-version.component';
 import { OnlineStatusComponent } from './online-status/online-status.component';
 import { PwaModalComponent } from './pwa-modal/pwa-modal.component';
 import { IconModule } from '../icon/icon.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { IconModule } from '../icon/icon.module';
     OnlineStatusComponent,
     PwaModalComponent,
   ],
-  imports: [CommonModule, IconModule],
+  imports: [SharedModule, IconModule],
   exports: [InstallAppComponent, NewVersionComponent, OnlineStatusComponent],
 })
 export class PwaModule {}

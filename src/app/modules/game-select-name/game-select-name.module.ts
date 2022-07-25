@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { GameSelectNameComponent } from './game-select-name.component';
 import { ImageModule } from '@portal-app/modules/image/image.module';
 import { IconModule } from '../icon/icon.module';

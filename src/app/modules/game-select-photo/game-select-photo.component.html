@@ -27,15 +27,15 @@
           [selected]="option.id === question.selectedOptionId"
           [disabled]="question.selectedOptionId ? true : false"
           [src]="option.image"
-          [ariaLabel]="'GAME_SELECT_PHOTO_OPTION_ARIA_LABEL' | translate: {number: i + 1}"
-          [alt]="'Person face {{ i }}'"
+          [ariaLabel]="'GAME.SELECT_PHOTO.OPTION_ARIA_LABEL' | translate: {number: i + 1}"
+          [alt]="'GAME.SELECT_PHOTO.OPTION_IMAGE_ALT' | translate: {number: i + 1}"
           (clickEvent)="onClick(option.id)"
           [text]="
             option.image
               ? undefined
               : question.answer
               ? undefined
-              : 'Image missing'
+              : 'GAME.SELECT_PHOTO.OPTION_IMAGE_MISSING' | translate
           "
           [validation]="
             question.answer

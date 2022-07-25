@@ -13,13 +13,13 @@
           *ngIf="sub.modalPwaPlatform === 'ANDROID'"
           (click)="onClickAddToHomeScreen()"
         >
-          Add this WEB app to home screen
+          {{'PWA.INSTALL_APP.ANDROID_ADD_TO_HOME_SCREEN' | translate}}
         </button>
-        <label *ngIf="sub.modalPwaPlatform === 'IOS'"
-          >To install this WEB app on your device, tap the <b>"Menu"</b> button
-          <app-icon svg="ios-menu" [size]="16"></app-icon> and then
-          <b>"Add to home screen"</b> button <i class="bi bi-plus-square"></i
-        ></label>
+        <label *ngIf="sub.modalPwaPlatform === 'IOS'">
+          {{'PWA.INSTALL_APP.IOS_ADD_TO_HOME_SCREEN_1' | translate}} <b>{{'PWA.INSTALL_APP.IOS_ADD_TO_HOME_SCREEN_2' | translate}}</b> {{'PWA.INSTALL_APP.IOS_ADD_TO_HOME_SCREEN_3' | translate}}
+          <app-icon svg="ios-menu" [size]="16"></app-icon> {{'PWA.INSTALL_APP.IOS_ADD_TO_HOME_SCREEN_4' | translate}}
+          <b>{{'PWA.INSTALL_APP.IOS_ADD_TO_HOME_SCREEN_5' | translate}}</b> {{'PWA.INSTALL_APP.IOS_ADD_TO_HOME_SCREEN_6' | translate}} <app-icon svg="x-mark" [size]="16" [rotate]="45"></app-icon>
+        </label>
       </div>
       <button type="button" aria-label="Close" (click)="onClickClosePwa()">
         <app-icon svg="x-mark" [size]="16"></app-icon>

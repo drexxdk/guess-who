@@ -3,6 +3,41 @@
   "GAME_SELECT_PHOTO_OPTION_ARIA_LABEL": "Vælg person {{number}}",
   "CHANGE_LANGUAGE": "Skift sprog",
   "GAME_API": {
-    "GAME_NOT_FOUND": "Spil ikke fundet"
+    "GAME_NOT_FOUND": "Spil ikke fundet",
+    "QUESTION_NOT_FOUND": "Spørgsmål ikke fundet"
+  },
+  "LOADING": "Loader...",
+  "GAME": {
+    "SELECT_NAME": {
+      "QUESTION_TITLE": "Hvem er dette?",
+      "QUESTION_TOGGLE_BUTTON_ARIA_LABEL_SHOW": "Vis titel",
+      "QUESTION_TOGGLE_BUTTON_ARIA_LABEL_HIDE": "Skjul titel",
+      "QUESTION_IMAGE_ALT": "Person face"
+    },
+    "SELECT_PHOTO": {
+      "QUESTION_TITLE": "Who is {{name}}?",
+      "OPTION_ARIA_LABEL": "Select person {{number}}",
+      "OPTION_IMAGE_ALT": "Person face {{number}}",
+      "OPTION_IMAGE_MISSING": "Image missing"
+    }
+  },
+  "PWA": {
+    "INSTALL_APP": {
+      "ANDROID_ADD_TO_HOME_SCREEN": "Add this WEB app to home screen",
+      "IOS_ADD_TO_HOME_SCREEN_1": "To install this WEB app on your device, tap the",
+      "IOS_ADD_TO_HOME_SCREEN_2": "\"Menu\"",
+      "IOS_ADD_TO_HOME_SCREEN_3": "button",
+      "IOS_ADD_TO_HOME_SCREEN_4": "and then",
+      "IOS_ADD_TO_HOME_SCREEN_5": "\"Add to home screen\"",
+      "IOS_ADD_TO_HOME_SCREEN_6": "button"
+    },
+    "NEW_VERSION": {
+      "TITLE": "A new version of this app is available.",
+      "UPDATE_BUTTON": "Update now",
+      "CLOSE_BUTTON": "Close"
+    },
+    "ONLINE_STATUS": {
+      "OFFLINE": "Offline"
+    }
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import {
   BeforeInstallPromptEvent,
@@ -11,7 +11,7 @@ import {
   templateUrl: './install-app.component.html',
   styleUrls: ['./install-app.component.scss'],
 })
-export class InstallAppComponent implements OnInit {
+export class InstallAppComponent {
   public readonly modalPwaEvent$: Observable<
     BeforeInstallPromptEvent | undefined
   >;
@@ -21,8 +21,6 @@ export class InstallAppComponent implements OnInit {
     this.modalPwaEvent$ = this.pwaService.modalPwaEvent$;
     this.modalPwaPlatform$ = this.pwaService.modalPwaPlatform$;
   }
-
-  ngOnInit(): void {}
 
   onClickClosePwa() {
     this.pwaService.closePwa();

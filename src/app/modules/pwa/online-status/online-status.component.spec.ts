@@ -10,7 +10,7 @@ describe('OnlineStatusComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ OnlineStatusComponent ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(OnlineStatusComponent);
     component = fixture.componentInstance;

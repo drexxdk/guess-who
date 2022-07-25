@@ -4,6 +4,6 @@
   } as sub"
 >
   <app-pwa-modal *ngIf="!sub.isOnline">
-    <label>Offline</label>
+    <label>{{'PWA.ONLINE_STATUS.OFFLINE' | translate}}</label>
   </app-pwa-modal>
 </ng-container>

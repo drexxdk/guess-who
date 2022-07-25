@@ -10,7 +10,7 @@ describe('NewVersionComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ NewVersionComponent ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(NewVersionComponent);
     component = fixture.componentInstance;

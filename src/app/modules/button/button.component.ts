@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { validation } from '@portal-app/types/validation.type';
 
 @Component({
@@ -8,9 +8,9 @@ import { validation } from '@portal-app/types/validation.type';
 })
 export class ButtonComponent {
   @Input() validation?: validation;
-  @Input() selected: boolean = false;
-  @Input() disabled: boolean = false;
-  @Input() animation: boolean = false;
+  @Input() selected = false;
+  @Input() disabled = false;
+  @Input() animation = false;
 
   @Output() clickEvent = new EventEmitter<void>();
   constructor() {}

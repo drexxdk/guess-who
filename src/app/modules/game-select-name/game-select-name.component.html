@@ -3,9 +3,11 @@
     <app-image
       [src]="question.image"
       [text]="question.selectedOptionId ? undefined : question.title"
-      [ariaLabel]="'Toggle title shown'"
-      [alt]="'Person face'"
+      [ariaLabel]="textShown ? ('GAME.SELECT_NAME.QUESTION_TOGGLE_BUTTON_ARIA_LABEL_HIDE' | translate) : ('GAME.SELECT_NAME.QUESTION_TOGGLE_BUTTON_ARIA_LABEL_SHOW' | translate)"
+      [alt]="'GAME.SELECT_NAME.QUESTION_IMAGE_ALT' | translate"
       [selected]="question.selectedOptionId ? true : false"
+      [textShown]="textShown"
+      (clickEvent)="onClickQuestionImage($event)"
       [validation]="
         question.answer
           ? question.answer.isCorrect

@@ -10,7 +10,7 @@ describe('InstallAppComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ InstallAppComponent ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(InstallAppComponent);
     component = fixture.componentInstance;

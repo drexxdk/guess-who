@@ -27,7 +27,7 @@ export class GameApiService {
 
   public fetchQuestion(questionId: number): Observable<GameStateQuestion> {
     if (!(questionId === 9)) {
-      return throwError(() => new Error('Question not found'));
+      return throwError(() => new Error(this.translateService.instant('GAME_API.QUESTION_NOT_FOUND')));
     }
     const subject = new ReplaySubject<GameStateQuestion>(1);
     if (questionId === 9) {
@@ -42,7 +42,7 @@ export class GameApiService {
     optionId: number
   ): Observable<GameStateAnswer> {
     if (!(questionId === 3 || questionId === 4 || questionId === 9)) {
-      return throwError(() => new Error('Question not found'));
+      return throwError(() => new Error(this.translateService.instant('GAME_API.QUESTION_NOT_FOUND')));
     }
     const subject = new ReplaySubject<GameStateAnswer>(1);
     let correctOptionId = 0;
@@ -95,7 +95,7 @@ export class GameApiService {
         { id: 3, title: 'Hans Mortensen' }, //correct
         { id: 4, title: 'Mikkel Hansen' },
       ],
-      title: 'Who is this?',
+      title: this.translateService.instant('GAME.SELECT_NAME.QUESTION_TITLE'),
       currentQuestionNumber: 1,
       currentQuestionId: 3,
       nextQuestionId: undefined,
@@ -125,7 +125,7 @@ export class GameApiService {
           image: 'assets/people/4.webp',
         },
       ],
-      title: 'Who is Simon?',
+      title: this.translateService.instant('GAME.SELECT_PHOTO.QUESTION_TITLE', {name: 'Simon'}),
       currentQuestionNumber: 1,
       currentQuestionId: 4,
       nextQuestionId: 9,
@@ -155,7 +155,7 @@ export class GameApiService {
           image: 'assets/people/8.webp', //correct
         },
       ],
-      title: 'Who is Michelle?',
+      title: this.translateService.instant('GAME.SELECT_PHOTO.QUESTION_TITLE', {name: 'Michelle'}),
       currentQuestionNumber: 2,
       currentQuestionId: 9,
       nextQuestionId: undefined,

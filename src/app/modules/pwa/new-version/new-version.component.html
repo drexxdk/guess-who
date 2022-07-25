@@ -6,15 +6,15 @@
   <app-pwa-modal *ngIf="sub.modalVersion">
     <div>
       <div>
-        <label>A new version of this app is available.</label>
+        <label>{{'PWA.NEW_VERSION.TITLE' | translate}}</label>
         <div class="buttons">
-          <button (click)="onClickUpdateVersion()">Update now</button>
+          <button (click)="onClickUpdateVersion()">{{'PWA.NEW_VERSION.UPDATE_BUTTON' | translate}}</button>
         </div>
       </div>
       <button
         class="close"
         type="button"
-        aria-label="Close"
+        [attr.aria-label]="'PWA.NEW_VERSION.CLOSE_BUTTON' | translate"
         (click)="onClickCloseVersion()"
       >
         <app-icon svg="x-mark" [size]="16"></app-icon>
