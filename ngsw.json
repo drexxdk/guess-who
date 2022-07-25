@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1658750341059,
+  "timestamp": 1658750633032,
   "index": "https://drexxdk.github.io/guess-who/index.html",
   "assetGroups": [
     {
@@ -87,9 +87,9 @@
     "https://drexxdk.github.io/guess-who/assets/svg/check.svg": "41861e0943565f0901d3f8c40287e48592fc748a",
     "https://drexxdk.github.io/guess-who/assets/svg/chevron-right.svg": "19e6e8f31444fbcc0e852f14b0a8a429fa5d4c07",
     "https://drexxdk.github.io/guess-who/assets/svg/image.svg": "e718e06c16672e0f66957cb865602fcc9dc7801f",
-    "https://drexxdk.github.io/guess-who/assets/svg/ios-menu.svg": "5cf097284104180692073375e263536cbcabdd5c",
+    "https://drexxdk.github.io/guess-who/assets/svg/ios-menu.svg": "c756aa1789d8e53b1bcf6f870d5ab7f82c405b5d",
     "https://drexxdk.github.io/guess-who/assets/svg/loading.svg": "f06d532f3c75cdf9e5a3eb9b65a8525e3e490919",
-    "https://drexxdk.github.io/guess-who/assets/svg/logo.svg": "38ed9a0b2db5c1586f378dd970a8413dbd5b16db",
+    "https://drexxdk.github.io/guess-who/assets/svg/logo.svg": "b749927026912c7251361b2ba7ad7c26d820a960",
     "https://drexxdk.github.io/guess-who/assets/svg/safari-pinned-tab.svg": "dfb3c581985135d7815c36bf4f7f13d30859072b",
     "https://drexxdk.github.io/guess-who/assets/svg/user.png": "f9d6142dcb0d875724af039952c20dee98006de4",
     "https://drexxdk.github.io/guess-who/assets/svg/x-mark.svg": "3b7365176da8f0bfac418ad2f032fa1465248666",
