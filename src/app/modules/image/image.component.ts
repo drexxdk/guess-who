@@ -2,7 +2,6 @@ import {
   Component,
   EventEmitter,
   Input,
-  OnInit,
   Output,
 } from '@angular/core';
 import { validation } from '@portal-app/types/validation.type';
@@ -12,7 +11,7 @@ import { validation } from '@portal-app/types/validation.type';
   templateUrl: './image.component.html',
   styleUrls: ['./image.component.scss'],
 })
-export class ImageComponent implements OnInit {
+export class ImageComponent {
   @Input() src?: string;
   @Input() alt!: string;
   @Input() ariaLabel!: string;
@@ -25,16 +24,6 @@ export class ImageComponent implements OnInit {
   @Output() clickEvent = new EventEmitter<boolean>();
 
   @Input() textShown = true;
-
-  ngOnInit(): void {
-    console.log(
-      this.src,
-      this.selected,
-      this.disabled,
-      this.validation,
-      this.animation
-    );
-  }
 
   onClick() {
     this.textShown = !this.textShown;

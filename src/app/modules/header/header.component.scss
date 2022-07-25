@@ -1,8 +1,8 @@
 @import "app";
 
 :host {
-  border-bottom: 1px solid rgba($gray-600, $opacity-small);
   background-color: rgba($gray-800, $opacity-small);
+  border-bottom: 1px solid rgba($gray-600, $opacity-small);
   display: flex;
   justify-content: center;
   overflow: hidden;
