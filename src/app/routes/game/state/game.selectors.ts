@@ -19,11 +19,11 @@ export const getNavigation = createSelector(
   (state: GameState): GameNavigation | undefined =>
     state?.game
       ? {
-          currentQuestionNumber: state.game.question.currentQuestionNumber,
-          currentQuestionId: state.game.question.currentQuestionId,
-          totalQuestions: state.game.question.totalQuestions,
-          nextQuestionId: state.game.question.nextQuestionId,
-          answered: state.game.question.answer ? true : false,
-        }
+        currentQuestionNumber: state.game.question.currentQuestionNumber,
+        currentQuestionId: state.game.question.currentQuestionId,
+        totalQuestions: state.game.question.totalQuestions,
+        nextQuestionId: state.game.question.nextQuestionId,
+        answered: state.game.question.answer ? true : false,
+      }
       : undefined
 );

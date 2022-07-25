@@ -33,44 +33,44 @@ export const gameReducer = createReducer(
     ...state,
     game: state.game
       ? {
-          ...state.game,
-          question: {
-            ...state.game.question,
-            status: 'pending',
-          },
-        }
+        ...state.game,
+        question: {
+          ...state.game.question,
+          status: 'pending',
+        },
+      }
       : undefined,
   })),
   on(GameActions.submitQuestionAnswer, (state, action) => ({
     ...state,
     game: state.game
       ? {
-          ...state.game,
-          question: {
-            ...state.game.question,
-            status: 'submitting',
-            selectedOptionId: action.optionId,
-            // options: state.game.question.options.map((option) =>
-            //   option.id === action.optionId
-            //     ? { ...option, selected: true }
-            //     : option
-            // ),
-          },
-        }
+        ...state.game,
+        question: {
+          ...state.game.question,
+          status: 'submitting',
+          selectedOptionId: action.optionId,
+          // options: state.game.question.options.map((option) =>
+          //   option.id === action.optionId
+          //     ? { ...option, selected: true }
+          //     : option
+          // ),
+        },
+      }
       : undefined,
   })),
   on(GameActions.submitQuestionAnswerSuccess, (state, action) => ({
     ...state,
     game: state.game
       ? {
-          ...state.game,
-          question: {
-            ...state.game.question,
-            status: 'submitted',
-            answer: action.answer,
-          },
-          // answers: [...state.game.answers, action.answer],
-        }
+        ...state.game,
+        question: {
+          ...state.game.question,
+          status: 'submitted',
+          answer: action.answer,
+        },
+        // answers: [...state.game.answers, action.answer],
+      }
       : undefined,
   })),
 
@@ -78,12 +78,12 @@ export const gameReducer = createReducer(
     ...state,
     game: state.game
       ? {
-          ...state.game,
-          question: {
-            ...state.game.question,
-            status: 'error',
-          },
-        }
+        ...state.game,
+        question: {
+          ...state.game.question,
+          status: 'error',
+        },
+      }
       : undefined,
   })),
   on(GameActions.fetchQuestionSuccess, (state, action) => ({
@@ -91,21 +91,21 @@ export const gameReducer = createReducer(
     status: 'success',
     game: state.game
       ? {
-          ...state.game,
-          question: action.question,
-        }
+        ...state.game,
+        question: action.question,
+      }
       : undefined,
   })),
   on(GameActions.fetchQuestionFailure, (state, action) => ({
     ...state,
     game: state.game
       ? {
-          ...state.game,
-          question: {
-            ...state.game.question,
-            status: 'error',
-          },
-        }
+        ...state.game,
+        question: {
+          ...state.game.question,
+          status: 'error',
+        },
+      }
       : undefined,
   }))
 );

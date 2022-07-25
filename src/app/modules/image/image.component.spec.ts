@@ -10,7 +10,7 @@ describe('ImageComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ ImageComponent ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ImageComponent);
     component = fixture.componentInstance;

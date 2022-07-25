@@ -2,14 +2,10 @@ import { Injectable } from '@angular/core';
 import {
   SwUpdate,
   VersionEvent,
-  VersionReadyEvent,
 } from '@angular/service-worker';
 import {
   BehaviorSubject,
-  filter,
   interval,
-  map,
-  Observable,
   Subject,
   take,
 } from 'rxjs';

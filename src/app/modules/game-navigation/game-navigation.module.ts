@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { GameNavigationComponent } from './game-navigation.component';
 import { IconModule } from '../icon/icon.module';
 import { EffectsModule } from '@ngrx/effects';

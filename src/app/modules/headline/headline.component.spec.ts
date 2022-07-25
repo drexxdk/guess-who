@@ -10,7 +10,7 @@ describe('HeadlineComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ HeadlineComponent ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(HeadlineComponent);
     component = fixture.componentInstance;
