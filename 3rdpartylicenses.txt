@@ -50,6 +50,12 @@ MIT
 @ngrx/store-devtools
 MIT
 
+@ngx-translate/core
+MIT
+
+@ngx-translate/http-loader
+MIT
+
 ng-inline-svg-2
 MIT
 The MIT License (MIT)
