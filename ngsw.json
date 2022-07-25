@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1658749159004,
+  "timestamp": 1658749423267,
   "index": "https://drexxdk.github.io/guess-who/index.html",
   "assetGroups": [
     {
@@ -39,8 +39,6 @@
         "ignoreVary": true
       },
       "urls": [
-        "https://drexxdk.github.io/guess-who/assets/i18n/da.json",
-        "https://drexxdk.github.io/guess-who/assets/i18n/en.json",
         "https://drexxdk.github.io/guess-who/assets/people/1.webp",
         "https://drexxdk.github.io/guess-who/assets/people/2.webp",
         "https://drexxdk.github.io/guess-who/assets/people/3.webp",
@@ -67,8 +65,6 @@
     "https://drexxdk.github.io/guess-who/158.7c740e34ec9f6f88.js": "ca6746fac888157623ec545d9dbb5972c021546e",
     "https://drexxdk.github.io/guess-who/351.47999e7dae788f97.js": "710a0b0bd907a2af437f87bc21b269d9617f03d0",
     "https://drexxdk.github.io/guess-who/610.319aaf50dba892ea.js": "dcc5181da3e13407e65cee9f03be798842e7c19f",
-    "https://drexxdk.github.io/guess-who/assets/i18n/da.json": "21d61da5aca47aaa1410b17ddddb518208a0c380",
-    "https://drexxdk.github.io/guess-who/assets/i18n/en.json": "aec4ea33c1c86108186583a1d8fdfb62675081b7",
     "https://drexxdk.github.io/guess-who/assets/icons/android-chrome-192x192.png": "b9349d8b8fd104e88f0d3255e0c4e6cf619d6073",
     "https://drexxdk.github.io/guess-who/assets/icons/android-chrome-512x512.png": "19652da937801c2456d6832a8c76152814684dbf",
     "https://drexxdk.github.io/guess-who/assets/icons/apple-touch-icon.png": "85fda2cba30e0f66cd3ec607c91c0476529b7a10",
